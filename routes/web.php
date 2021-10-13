@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\SpecsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Controller::class, 'index']);
+
+Route::get('registro', [UserController::class, 'create']);
+
+Route::get('convocatoria', [AnnouncementController::class, 'create']);
+
+route::get('especificaciones', [SpecsController::class, 'create']);
