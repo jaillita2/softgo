@@ -13,6 +13,18 @@
 <body>
 
     <!--header-->
+    <header class="header">
+        <link rel="stylesheet" href="/css/style.css" class="rel">
+
+        <div class="contanier">
+            <a href="#" class="logo">LOGO</a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#">Registro usuario</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <!--nav-->
 
     @yield('content')

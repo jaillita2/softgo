@@ -3,8 +3,8 @@
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\SpecsController;
+use App\Http\Controllers\UserCreateController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +19,10 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [Controller::class, 'index']);
 
-Route::get('registro', [UserController::class, 'create']);
+/*Route::get('user', [UserCreateController::class, 'create']);*/
 
 Route::get('convocatoria', [AnnouncementController::class, 'create']);
 
-route::get('especificaciones', [SpecsController::class, 'create']);
+Route::get('especificaciones', [SpecsController::class, 'create']);
+
+Route::resource('users', UserCreateController::class);
