@@ -11,7 +11,7 @@ class Controller extends BaseController
 {
 
     public function index(){
-        return view('registrer.index');
+        return view('register.index');
     }
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 

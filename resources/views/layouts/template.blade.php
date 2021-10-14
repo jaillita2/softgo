@@ -20,7 +20,7 @@
             <a href="#" class="logo">LOGO</a>
             <nav class="navigation">
                 <ul>
-                    <li><a href="#">Registro usuario</a></li>
+                    <a href="{{ url('users') }}"> Registro usuario</a>
                 </ul>
             </nav>
         </div>

@@ -15,7 +15,7 @@ class UserCreateController extends Controller
     public function index()
     {
         //
-        return view('registrer.createUser');
+        return view('register.createUser');
     }
 
     /**
@@ -26,7 +26,7 @@ class UserCreateController extends Controller
     public function create()
     {
         //
-        return view('registrer.createUser');
+        return view('register.createUser');
     }
 
     /**
@@ -38,7 +38,17 @@ class UserCreateController extends Controller
     public function store(Request $request)
     {
         //
-        $datosUsers = request()->all();
+        request()->validate([
+            'name_user'=>'required',
+            'passwd'=>'required',
+            'Confirmar_contrasena'=>'required',
+            'email'=>'required',
+            'last_name'=>'required',
+            'name'=>'required'
+        ]);
+
+        $datosUsers = request()->except('_token');
+        User_Create::insert($datosUsers);
         return response()->json($datosUsers);
 
     }
