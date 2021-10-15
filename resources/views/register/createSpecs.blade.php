@@ -12,7 +12,7 @@
 <div>
 
 </div>
-<input #nombreU type="text" matInput minlength="3" maxlength="30" formControlName="nombre" required>
+
         <input type="text" name="Nombre_usuario" id="Nombre_usuario" class="form-control"> 
 </div>
 
