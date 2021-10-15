@@ -22,9 +22,6 @@
                 <ul>
                     <a href="{{ url('users') }}"> Registro usuario</a>
                 </ul>
-                <ul>
-                    <a href="{{ url('especificaciones') }}"> Pliego de especificaciones</a>
-                </ul>
             </nav>
         </div>
     </header>
