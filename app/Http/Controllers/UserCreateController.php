@@ -42,7 +42,7 @@ class UserCreateController extends Controller
             'name_user'=>'required',
             'passwd'=>'required',
             'Confirmar_contrasena'=>'required',
-            'email'=>'required',
+            'email'=>'required|email',
             'last_name'=>'required',
             'name'=>'required'
         ]);

@@ -17,7 +17,7 @@ class CreateUserCreatesTable extends Migration
 
             $table->id();
 
-            $table->string('name_user');
+            $table->string('username');
             $table->string('passwd')->nullable();
             $table->string('email')->nullable();
             $table->string('last_name')->nullable();

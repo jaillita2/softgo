@@ -1,0 +1,31 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-register {
+    width: 450px;
+    background: #A1ADAD;
+    padding: 20px;
+    margin: auto;
+    margin-top: 8px;
+    border-radius: 5px;
+
+}
+
+.form-register h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-register h4 {
+    font-size: 17px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls {
+    width: 90%;
+
+}
+
