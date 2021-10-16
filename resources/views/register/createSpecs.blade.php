@@ -3,17 +3,18 @@
 @section('title', 'Specs')
 
 @section('content')
-    <h1>PUBLICAR PLIEGO DE ESPECIFICACIONES</h1>
-    <div class="container">
+<link rel="stylesheet" href="/css/especificaciones.css" class="rel">
+<form>
 
-
+<div class="container">
+    <h1>Publicar pliego de especificaciones</h1>
+  
 <div>
-<label for="Nombre_usuario"> Titulo: </label>
+<label for="Titulo"> Titulo: </label>
 <div>
 
 </div>
-
-        <input type="text" name="Nombre_usuario" id="Nombre_usuario" class="form-control"> 
+        <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Introduzca titulo"> 
 </div>
 
 <div>
@@ -21,8 +22,7 @@
 <div>
 
         <div class="md-form md-outline input-with-post-icon datepicker">
-         <input placeholder="Select date" type="date" id="example" class="form-control">
-          
+         <input placeholder="Select date" type="date" id="example" class="form-control">    
     </div>
 
     <div>
@@ -33,7 +33,6 @@
   <option selected>Seleccione</option>
   <option value="1">1-2021</option>
   <option value="2">2-2021</option>
-  <option value="3">1-2022</option>
 </select>
     </div>
  
@@ -50,15 +49,17 @@
 <div>
 
 <div>
-<input type="file" id="files" name="files[]" multiple />
-<output id="list"></output>
+<input type="file" id="files" name="pdffile" id="pdffile" require>
 
-        </div>
+</div>
+
+        
 
         <div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="button">Visualizar</button>
-  <button class="btn btn-primary" type="button">Publicar</button>
-  
+  <button class="btn btn-primary" type="button1">Visualizar</button>
+  <button class="btn btn-primary" type="button2">Publicar</button> 
 </div>
-</div>
+<script>src="js/main.js"</script>
+</form> 
+
         @endsection
