@@ -6,6 +6,10 @@ use App\Http\Controllers\SpecsController;
 use App\Http\Controllers\UserCreateController;
 use Illuminate\Support\Facades\Route;
 
+// begin @jesus impotacion
+use App\Http\Controllers\PliegoController;
+// end importaciones
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +30,13 @@ Route::get('convocatoria', [AnnouncementController::class, 'create']);
 Route::get('especificaciones', [SpecsController::class, 'create']);
 
 Route::resource('users', UserCreateController::class);
+
+/*=========================
+ begin @jesus agregar rutas para pliego 
+=========================== */
+Route::resource('pliego', PliegoController::class);
+/*=========================
+end @jesus rutas para pliego
+=========================== */
+
+
