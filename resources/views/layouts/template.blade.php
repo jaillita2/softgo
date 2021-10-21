@@ -15,14 +15,13 @@
     <!--header-->
     <header class="header">
         <link rel="stylesheet" href="/css/style.css" class="rel">
-
-        <div class="contanier">
+        <div class="contanier logo-nav-contanier">
             <a href="#" class="logo">LOGO</a>
             <nav class="navigation">
                 <ul>
-                    <a href="{{ url('users') }}"> Registro usuario</a>
-                    <a href="{{ url('convocatoria') }}"> Convocatoria</a>
-                    <a href="{{ url('especificaciones') }}"> Especificaciones</a>
+                    <li><a href="{{ url('users') }}"> Registro usuario</a></li>
+                    <li><a href="{{ url('convocatoria') }}"> Convocatoria</a></li>
+                    <li><a href="{{ url('especificaciones') }}"> Especificaciones</a></li>
                 </ul>
             </nav>
         </div>

@@ -39,7 +39,7 @@ class UserCreateController extends Controller
     {
         //
         request()->validate([
-            'name_user'=>'required',
+            'username'=>'required',
             'passwd'=>'required',
             'Confirmar_contrasena'=>'required',
             'email'=>'required|email',

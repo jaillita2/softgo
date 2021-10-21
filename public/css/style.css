@@ -1,5 +1,13 @@
 .header {
-    background: #333;
+    background:rgb(3, 93, 134);
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
 }
+ .logo-nav-contanier {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .header a {
+     color: white;
+ }
