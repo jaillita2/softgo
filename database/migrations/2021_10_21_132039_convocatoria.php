@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserCreatesTable extends Migration
+class Convocatoria extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ class CreateUserCreatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('usuario', function (Blueprint $table) {
-
+        Schema::create('convocatoria', function (Blueprint $table) {
             $table->id();
 
+            $table->string('id_conv');
             $table->string('id_user');
-            $table->string('username');
-            $table->string('passwd')->nullable();
-            $table->string('email')->nullable();
-            $table->string('last_name')->nullable();
-            $table->string('name')->nullable();
-            $table->timestamps();
+            $table->string('titulo_conv');
+            $table->string('fecha_conv');
+            $table->string('semestre_conv');
+            $table->string('descrip_conv');
+            $table->binary('doc_conv');
 
+            $table->timestamps();
         });
     }
 
@@ -35,6 +35,6 @@ class CreateUserCreatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('usuario');
+        Schema::dropIfExists('convocatoria');
     }
 }

@@ -21,6 +21,8 @@
             <nav class="navigation">
                 <ul>
                     <a href="{{ url('users') }}"> Registro usuario</a>
+                    <a href="{{ url('convocatoria') }}"> Convocatoria</a>
+                    <a href="{{ url('especificaciones') }}"> Especificaciones</a>
                 </ul>
             </nav>
         </div>
