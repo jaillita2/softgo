@@ -23,6 +23,8 @@ Route::get('/', [Controller::class, 'index']);
 
 Route::get('convocatoria', [AnnouncementController::class, 'create']);
 
+Route::post('convocatoria', [AnnouncementController::class, 'store'])->name('convocatoria.store');
+
 Route::get('especificaciones', [SpecsController::class, 'create']);
 
 Route::resource('users', UserCreateController::class);

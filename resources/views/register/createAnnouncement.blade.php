@@ -1,20 +1,21 @@
-formulario para crear pliegos
+formulario para crear convocatoria
+
 <div class="container">
-    <form action="{{url('convocatoria')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('convocatoria.store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="tituloConvocatoria">Titulo</label>
-            <input type="text" class="form-control" id="tituloConvocatoria" name="Titulo" placeholder="Ingrese el Titulo">
+            <label for="TITULO_CONV">Titulo</label>
+            <input type="text" class="form-control" id="tituloConvocatoria" name="TITULO_CONV" placeholder="Ingrese el Titulo">
         </div>
 
         <div class="form-group">
-            <label for="fechaConvocatoria">Seleccionar Fecha:</label>
-            <input class="form-control" type="date" id="fechaConvocatoria" name="fechaConvocatoria" placeholder="Select date">
+            <label for="FECHA_CONV">Seleccionar Fecha:</label>
+            <input class="form-control" type="date" id="fechaConvocatoria" name="FECHA_CONV" placeholder="Select date">
         </div>
 
         <div class="form-group">
-            <label for="semestreConvocatoria">Semestre:</label>
-            <select name="semestreConvocatoria" id="semestreConvocatoria">
+            <label for="SEMESTRE_CONV">Semestre:</label>
+            <select name="SEMESTRE_CONV" id="semestreConvocatoria">
                 <option value="">Seleccione..</option>
                 <option value="1">1º Semestre</option>
                 <option value="2">2º Semestre</option>
@@ -22,13 +23,13 @@ formulario para crear pliegos
         </div>
 
         <div class="form-group ">
-            <label for="descripcionConvocatoria">Descripcion:</label>
-            <textarea class="form-control" id="descripcionConvocatoria" name="descripcionConvocatoria" rows="3"></textarea>
+            <label for="DESCRIP_CONV">Descripcion:</label>
+            <textarea class="form-control" id="descripcionConvocatoria" name="DESCRIP_CONV" rows="3"></textarea>
         </div>
 
         <div class="form-group ">
-            <label for="archivoConvocatoria">Descripcion:</label>
-            <input type="file" id="archivoConvocatoria" name="archivoConvocatoria">
+            <label for="DOC_CONV">Descripcion:</label>
+            <input type="file" id="archivoConvocatoria" name="DOC_CONV">
         </div>
 
         <div class="form-group ">

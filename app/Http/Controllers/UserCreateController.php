@@ -38,14 +38,6 @@ class UserCreateController extends Controller
     public function store(Request $request)
     {
         //
-        request()->validate([
-            'username'=>'required',
-            'passwd'=>'required',
-            'Confirmar_contrasena'=>'required',
-            'email'=>'required|email',
-            'last_name'=>'required',
-            'name'=>'required'
-        ]);
 
         $datosUsers = request()->except('_token');
         User_Create::insert($datosUsers);
