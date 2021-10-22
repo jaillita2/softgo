@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Convocatoria;
+use App\Models\Convocatoria;
 use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller
