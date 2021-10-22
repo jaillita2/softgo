@@ -1,65 +1,41 @@
-@extends('layouts.template')
-
-@section('title', 'Announcement')
-
-@section('content')
-<link rel="stylesheet" href="/css/convocatoria.css" class="rel">
-<form>
-
+formulario para crear pliegos
 <div class="container">
-    <h1>Publicar convocatoria</h1>
-  
-<div>
-<label for="Titulo"> Titulo: </label>
-<div>
+    <form action="{{url('convocatoria')}}" method="post" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+            <label for="tituloConvocatoria">Titulo</label>
+            <input type="text" class="form-control" id="tituloConvocatoria" name="Titulo" placeholder="Ingrese el Titulo">
+        </div>
 
+        <div class="form-group">
+            <label for="fechaConvocatoria">Seleccionar Fecha:</label>
+            <input class="form-control" type="date" id="fechaConvocatoria" name="fechaConvocatoria" placeholder="Select date">
+        </div>
+
+        <div class="form-group">
+            <label for="semestreConvocatoria">Semestre:</label>
+            <select name="semestreConvocatoria" id="semestreConvocatoria">
+                <option value="">Seleccione..</option>
+                <option value="1">1º Semestre</option>
+                <option value="2">2º Semestre</option>
+            </select>
+        </div>
+
+        <div class="form-group ">
+            <label for="descripcionConvocatoria">Descripcion:</label>
+            <textarea class="form-control" id="descripcionConvocatoria" name="descripcionConvocatoria" rows="3"></textarea>
+        </div>
+
+        <div class="form-group ">
+            <label for="archivoConvocatoria">Descripcion:</label>
+            <input type="file" id="archivoConvocatoria" name="archivoConvocatoria">
+        </div>
+
+        <div class="form-group ">
+            <button class="btn btn-success" id="btnAgregar">Agregar</button>
+            <button class="btn btn-warnig" id="btnCancelar">Cancelar</button>
+        </div>
+
+
+    </form>
 </div>
-        <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Introduzca titulo"> 
-</div>
-
-<div>
-<label for="Seleccionar_fecha"> Seleccionar Fecha: </label>
-<div>
-
-        <div class="md-form md-outline input-with-post-icon datepicker">
-         <input placeholder="Select date" type="date" id="example" class="form-control">    
-    </div>
-
-    <div>
-<label for="Seleccionar_fecha"> Semestre: </label>
-<div>
-    <div>
-    <select class="form-select" aria-label="Default select example">
-  <option selected>Seleccione</option>
-  <option value="1">1-2021</option>
-  <option value="2">2-2021</option>
-</select>
-    </div>
- 
-    <div>
-<label for="Descripcion"> Descripcion: </label>
-<div>
-
-<div class="mb-3">
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-</div>
-
-<div>
-<label for="Adjuntar_documento"> Adjuntar documento: </label>
-<div>
-
-<div>
-<input type="file" id="files" name="pdffile" id="pdffile" require>
-</div>
-
-        
-
-        <div class="d-grid gap-2 d-md-block">
-  <button class="btn btn-primary" type="button1">Visualizar</button>
-  <button class="btn btn-primary" type="button2">Publicar</button> 
-</div>
-<script>src="js/main.js"</script>
-</form> 
-
-        @endsection
-
