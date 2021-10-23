@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="/css/style.css" class="rel">
         <div class="contanier logo-nav-contanier">
             <div id="logo"></div>
-            <h2>UNIVERSISDAD MAYOR DE SAN SIMON</h2>
+            <h1>UNIVERSISDAD MAYOR DE SAN SIMON</h1>
             <nav class="navigation">
                 <ul>
                     <li><a href="{{ url('users') }}"> Registro usuario</a></li>
