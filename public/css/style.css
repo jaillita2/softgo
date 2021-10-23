@@ -2,12 +2,64 @@
     background:rgb(3, 93, 134);
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
+    padding: 0.8rem 0;
 }
+
+
+
  .logo-nav-contanier {
      display: flex;
      justify-content: space-between;
+     align-items: center;
  }
 
  .header a {
      color: white;
+     text-decoration: none;
+
  }
+
+
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navigation ul.show{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+ .navigation ul li{
+     display: inline-block;
+ }
+
+ .navigation ul li a{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+    background: blue;
+}
+
+@media only screen and (max-width: 450px) {
+
+    .navigation ul li{
+        display: block;
+    }
+
+    .navigation ul li a{
+       display: inline-block;
+       padding: 0.5rem 1rem;
+       transition: all 0.4s linear;
+       border-radius: 5px;
+   }
+
+   .navigation ul li a:hover {
+       background: blue;
+   }
+}

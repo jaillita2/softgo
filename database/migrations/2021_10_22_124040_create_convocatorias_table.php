@@ -22,6 +22,7 @@ class CreateConvocatoriasTable extends Migration
             $table->string('semestre_conv');
             $table->string('descrip_conv');
             $table->binary('doc_conv');
+            $table->timestamps();
         });
     }
 

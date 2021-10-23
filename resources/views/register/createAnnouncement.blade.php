@@ -1,5 +1,11 @@
-formulario para crear convocatoria
 
+
+@extends('layouts.template')
+
+@section('title', 'Convocatoria')
+
+@section('content')
+<link rel="stylesheet" href="/css/convocatoria.css" class="rel">
 <div class="container">
     <form action="{{route('convocatoria.store')}}" method="post" enctype="multipart/form-data">
         @csrf
@@ -40,3 +46,4 @@ formulario para crear convocatoria
 
     </form>
 </div>
+@endsection

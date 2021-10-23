@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'Create User')
+@section('title', 'Registro')
 
 @section('content')
 <link rel="stylesheet" href="/css/usuario.css" class="rel">
