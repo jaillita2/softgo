@@ -13,11 +13,10 @@
     align-items: center;
 }
 
-.container {
- 
+.containers {
+
     max-width: 50%;
     max-height: 100%;
-    background: #A1ADAD;
     padding: 40px 10px;
     margin: auto;
     margin-top: 8px;
@@ -25,6 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
 }
 
 .container h1 {

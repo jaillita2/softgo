@@ -19,6 +19,31 @@
 
  }
 
+ .footer {
+    background: rgb(3, 93, 134);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0.8rem 0;
+    justify-content: center;
+ }
+
+ .footer .contaniers {
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+
+ }
+
+ #logo{
+    margin: all;
+    width:20%;
+    height: 130px;
+    background: url(logo.jpeg)no-repeat right;
+    float: left;
+    margin-right: 50px;
+    position: relative;
+}
 
 .navigation ul{
     margin: 0;

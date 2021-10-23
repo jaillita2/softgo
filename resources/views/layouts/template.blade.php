@@ -16,7 +16,8 @@
     <header class="header">
         <link rel="stylesheet" href="/css/style.css" class="rel">
         <div class="contanier logo-nav-contanier">
-            <a href="#" class="logo">LOGO</a>
+            <div id="logo"></div>
+            <h2>UNIVERSISDAD MAYOR DE SAN SIMON</h2>
             <nav class="navigation">
                 <ul>
                     <li><a href="{{ url('users') }}"> Registro usuario</a></li>
@@ -30,7 +31,16 @@
 
     @yield('content')
 
-    <!--footer-->
+    <footer class="footer">
+        <link rel="stylesheet" href="/css/style.css" class="rel">
+            <div class="contaniers">
+                <p>Contactanos</p>
+                <p>Email: softgo2021@gmail.com</p>
+                <p>Telefono celular: +5916776293</p>
+                <P>Direccion: Av. Blanco Galindo KM 3</P>
+                <p>Copyright 2021 - Pagina creada por SOFTGO - Todos los derechos reservados</p>
+            </div>
+    </footer>
     <!--script-->
 </body>
 </html>
