@@ -20,11 +20,19 @@
  }
 
  .footer {
+    margin: auto;
     background: rgb(3, 93, 134);
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 0.8rem 0;
     justify-content: center;
+    text-align:center;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0%;
+
  }
 
  .footer .contaniers {
@@ -43,6 +51,7 @@
     float: left;
     margin-right: 50px;
     position: relative;
+
 }
 
 .navigation ul{
