@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="/css/style.css" class="rel">
         <div class="contanier logo-nav-contanier">
             <div id="logo"></div>
-            <h1>UNIVERSISDAD MAYOR DE SAN SIMON</h1>
+            <h1>UNIVERSIDAD MAYOR DE SAN SIMON</h1>
             <nav class="navigation">
                 <ul>
                     <li><a href="{{ url('users') }}"> Registro usuario</a></li>
@@ -40,6 +40,7 @@
                 <P>Direccion: Av. Blanco Galindo KM 3</P>
                 <p>Copyright 2021 - Pagina creada por SOFTGO - Todos los derechos reservados</p>
             </div>
+
     </footer>
     <!--script-->
 </body>

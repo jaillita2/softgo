@@ -35,6 +35,7 @@
     bottom: 0;
     width: 100%;
     left: 0%;
+    padding: 0.8rem 0;
 
  }
 
@@ -43,13 +44,12 @@
     align-items: center;
     max-width: 1200px;
     margin: auto;
-
  }
 
 #logo{
     left: 3.2%;
     margin: all;
-    width:75px;
+    width: 75px;
     height: 95px;
     background: url(logo.jpeg);
     float: left;
@@ -57,6 +57,7 @@
     position: relative;
     background-size: 100% 100%;
 }
+
 .navigation ul{
     margin: 0;
     padding: 0;
