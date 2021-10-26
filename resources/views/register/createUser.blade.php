@@ -3,6 +3,16 @@
 @section('title', 'Registro')
 
 @section('content')
+<?php 
+    if(issect($_POST['submit'])){
+        $name_user = $_POST['name_user'];
+        $id_user = $_POST['id_user'];
+        $passwd_user = $_POST['passwd_user'];
+        $email = $_POST['email'];
+        $last_name = $_POST['email'];
+        $name = $_POST['name'];
+    }
+?>    
 <link rel="stylesheet" href="/css/usuario.css" class="rel">
 
         <form class="form-register" method="post" action="{{ url('users') }}">
@@ -38,6 +48,10 @@
             <br>
             <button type="submit">Cancelar</button>
             <br>
+            
+            <?php
+            include("validaci_user.php")
+            ?>
 
         </form>
 @endsection
