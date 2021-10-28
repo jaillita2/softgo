@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Especificacion extends Migration
+class CreateEspecificacionesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class Especificacion extends Migration
      */
     public function up()
     {
-        Schema::create('especificacion', function (Blueprint $table) {
-            $table->id();
-            $table->string('id_esp');
+        Schema::create('especificaciones', function (Blueprint $table) {
+            $table->id('id_esp');
             $table->string('id_user');
             $table->string('titulo_esp');
             $table->string('fecha_esp');
@@ -33,6 +32,6 @@ class Especificacion extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('especificacion');
+        Schema::dropIfExists('especificaciones');
     }
 }
