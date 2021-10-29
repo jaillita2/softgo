@@ -7,7 +7,7 @@
 <div class="container">
     <form action="{{route('especificaciones.store')}}" method="post" enctype="multipart/form-data">
         @csrf
-<<<<<<< HEAD
+
         <?php
         if(isset($_POST['ESP'])){
             $TITULO_ESP = $_POST['TITULO_ESP'];
@@ -58,7 +58,7 @@
         ?>
 =======
         <h1>PUBLICAR PLIEGO DE ESPECIFICACION</h1>
->>>>>>> 88ad61c1c59d9e59ba8188b74ab43ab2aedf9b7c
+
         <div class="form-group">
             <label for="TITULO_ESP">Titulo</label><br>
             <input type="text" class="form-control" id="titulo_esp" name="TITULO_ESP" placeholder="Ingrese el Titulo">
