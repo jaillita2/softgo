@@ -7,6 +7,54 @@
 <div class="container">
     <form action="{{route('especificaciones.store')}}" method="post" enctype="multipart/form-data">
         @csrf
+        <?php
+        if(isset($_POST['ESP'])){
+            $TITULO_ESP = $_POST['TITULO_ESP'];
+            $FECHA_ESP = $_POST['FECHA_ESP'];
+            $DESCRIP_ESP = $_POST['DESCRIP_ESP'];
+            $DOC_ESP = $_POST['DOC_ESP'];
+            
+            $campos = array();
+
+                if($TITULO_ESP == ""){
+                    array_push($campos, "el campo titulo convocatoria no puede  vacio");
+                    if(strlen($TITULO_ESP) > 30){
+                        echo "<p class='error'>* el titulo es muy largo </p";
+                        if(is_numeric($TITULO_ESP)){
+                            echo "<p class='error'>* no esta permitido numeros </p";
+                        }
+                    }
+                }
+                if($FECHA_ESP == ""){
+                    array_push($campos, "el campo fecha no puede  vacio");
+                }
+                if($DESCRIP_ESP == ""){
+                    array_push($campos, "el campo descripcion convocatoria no puede  vacio");
+                    if(strlen($DESCRIP_ESP) > 90){
+                        echo "<p class='error'>* Ddescripcion muy larga </p";
+                        if(is_numeric($DESCRIP_ESP)){
+                            echo "<p class='error'>* no esta permitido numeros </p";
+                        }
+                    }
+                }
+                if($DOC_ESP ['archivo']['type'] !='application/pdf'){
+                    echo 'es un archivo pdf';
+                }else{
+                     echo "El archivo SI es pdf";
+                }
+
+                if(count($campos) > 0){
+                    echo "<div class='error'>";
+                            for($i = 0; $i < count($campos); $i++){
+                                echo "<li>".$campos[$i]."</div>";
+                            }
+                        }else{
+                            echo "<div class='correcto'>
+                                    datos correctos";
+                            }
+                            echo "</div>";
+        }
+        ?>
         <div class="form-group">
             <label for="TITULO_ESP">Titulo</label>
             <input type="text" class="form-control" id="titulo_esp" name="TITULO_ESP" placeholder="Ingrese el Titulo">

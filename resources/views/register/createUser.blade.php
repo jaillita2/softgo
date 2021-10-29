@@ -40,8 +40,8 @@
                                 }   
                              }
                         } 
-                        if($PASSWD_USER == "" || strlen($PASSWD_USER) < 6){
-                            array_push($campos, "el campo password no puede estar vacio, ni tener menos de 6 caracteres");
+                        if($PASSWD_USER == "" || strlen($PASSWD_USER) < 9){
+                            array_push($campos, "el campo password no puede estar vacio, ni tener menos de 9 caracteres");
                         }
                         if($EMAIL == "" || strpos($EMAIL, "@") === false){
                             array_push($campos, "ingresa un correo electronico valido");
