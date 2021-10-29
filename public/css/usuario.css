@@ -6,13 +6,22 @@
     position: relative;
 }
 
+ button{
+    margin-top: 10px;
+    width: 110px; 
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
 .form-register {
+    max-width: 50%;
+    max-height: 100%;
     background: #A1ADAD;
     padding: 20px;
     margin: auto;
     margin-top: 8px;
     border-radius: 5px;
-    min-height: 100vh;
+    min-height: 75vh;
     justify-content: center;
     align-items: center;
 

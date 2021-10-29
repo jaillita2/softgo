@@ -1,8 +1,6 @@
-
-
 @extends('layouts.template')
 
-@section('title', 'Convocatoria')
+@section('title', 'Specs')
 
 @section('content')
 <link rel="stylesheet" href="/css/convocatoria.css" class="rel">
@@ -57,19 +55,22 @@
                             echo "</div>";
         }
         ?>
+       
+=======
+        <h1>PUBLICAR CONVOCATORIA</h1>
         <div class="form-group">
-            <label for="TITULO_CONV">Titulo</label>
-            <input type="text" class="form-control" id="tituloConvocatoria" name="TITULO_CONV" placeholder="Ingrese el Titulo">
+            <label for="TITULO_ESP">Titulo</label><br>
+            <input type="text" class="form-control" id="titulo_esp" name="TITULO_ESP" placeholder="Ingrese el Titulo">
         </div>
 
         <div class="form-group">
-            <label for="FECHA_CONV">Seleccionar Fecha:</label>
-            <input class="form-control" type="date" id="fechaConvocatoria" name="FECHA_CONV" placeholder="Select date">
+            <label for="FECHA_ESP">Seleccionar Fecha:</label><br>
+            <input class="form-control" type="date" id="fecha_esp" name="FECHA_ESP" placeholder="Select date">
         </div>
 
         <div class="form-group">
-            <label for="SEMESTRE_CONV">Semestre:</label>
-            <select name="SEMESTRE_CONV" id="semestreConvocatoria">
+            <label for="SEMESTRE_ESP">Semestre:</label><br>
+            <select name="SEMESTRE_ESP" id="semestre_esp">
                 <option value="">Seleccione..</option>
                 <option value="1">1º Semestre</option>
                 <option value="2">2º Semestre</option>
@@ -77,18 +78,18 @@
         </div>
 
         <div class="form-group ">
-            <label for="DESCRIP_CONV">Descripcion:</label>
-            <textarea class="form-control" id="descripcionConvocatoria" name="DESCRIP_CONV" rows="3"></textarea>
+            <label for="DESCRIP_ESP">Descripcion:</label><br>
+            <textarea class="form-control" id="descrip_esp" name="DESCRIP_ESP" rows="8"></textarea>
         </div>
 
         <div class="form-group ">
-            <label for="DOC_CONV">Descripcion:</label>
-            <input type="file" id="archivoConvocatoria" name="DOC_CONV">
+            <label for="DOC_ESP">Adjuntar Archivo:</label><br>
+            <input type="file" id="archivoESP" name="DOC_ESP">
         </div>
 
         <div class="form-group ">
-            <button class="btn btn-success" id="btnAgregar">Agregar</button>
-            <button class="btn btn-warnig" id="btnCancelar">Cancelar</button>
+            <button class="btn btn-success" id="btnAgregar">Publicar</button>
+            <button class="btn btn-warnig" id="btnCancelar">Eliminar</button>
         </div>
 
 
