@@ -5,50 +5,58 @@
     font-family: sans-serif;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.form{
+.container{
+    font-size: 15px ;
+    background: #A1ADAD;
+    padding: 30px 60px;
+    margin: 0 auto;
     width: 100%;
-    min-height: 100vh;
-    background: #f1f1f1;
-    justify-content: center;
-    align-items: center;
+    max-width: 600px;
+    max-height:560px ;
+    border-radius: 15px;
+    margin-top: 30px;   
+    margin-bottom: 60px;
 }
 
-.container {
+.form-control, select{
+    border-radius: solido 1px #ccc ;
+    padding: 4px;
+    width: 400px;
+    border-radius: 5px;
+  
+}
+input[type="file"] {
+    display: none;
+}
 
-    max-width: 50%;
-    max-height: 100%;
-    background: #A1ADAD;
-    padding: 20px 10px;
-    margin: auto;
-    margin-top: 8px;
-    border-radius: 20px;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
+.Adjuntar .Adjuntar{
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
     
+}
+.file-select {
+  position: relative;
+  display: inline-block;
+}
+.container h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .container button{
-    padding: 10px;
-    margin-top: 10px;
-    margin-left: 28%; 
-}
+    padding: 5px;
+    margin: 60px;
+    background-color:#d8e0e0;
+    width: 20%;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
 
 
-.form-control{
-    width: 90%;
-}
 
-[id=titulo_esp] { width: 70%;}
-[id=fecha_esp] { width: 30%;}
-[id=descrip_esp] { width: 70%;}
-
-.container h1 {
-    font-size: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-}
 
 
 

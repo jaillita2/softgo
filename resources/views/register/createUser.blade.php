@@ -23,7 +23,7 @@
                     $campos = array();
 
                         if($NAME_USER == ""){
-                            array_push($campos, "el campo combre no puede  vacio");
+                            array_push($campos, "el campo nombre no puede  vacio");
                             if(strlen($NAME_USER) > 30){
                                 echo "<p class='error'>* el nombre de usuario es muy largo </p";
                                 if(is_numeric($NAME_USER)){
@@ -81,34 +81,32 @@
                       
     
             ?> 
-            <label for="NAME_USER"> Nombre de usuario: </label>
+            <label for="NAME_USER"> Nombre de usuario: </label><br>
             <input class="controls" type="text" name="NAME_USER" id="username" placeholder="Juan_Perez" value="{{ old('ID_USER')}}"><br>
             
-            <label for="ID_USER"> Codigo Sis: </label>
+            <label for="ID_USER"> Código Sis: </label><br>
             <input class="controls" type="text" name="ID_USER" id="username" placeholder="2020598923" value="{{ old('ID_USER')}}"><br>
 
-            <label for="PASSWD_USER"> Contraseña: </label>
+            <label for="PASSWD_USER"> Contraseña: </label><br>
             <input class="controls" type="password" name="PASSWD_USER" id="passwd" placeholder="Constraseña..." value="{{ old('PASSWD_USER')}}">
             <br>
 
 
-            <label for="EMAIL"> Direccion de correo: </label>
+            <label for="EMAIL"> Dirección de correo: </label><br>
             <input class="controls" type="email" name="EMAIL" id="email" placeholder="juanperez@example.com" value="{{ old('EMAIL')}}">
             <br>
 
-            <label for="LAST_NAME"> Apellido(s): </label>
+            <label for="LAST_NAME"> Apellido(s): </label><br>
             <input class="controls" type="text" name="LAST_NAME" id="last_name" placeholder="Perez Maldonado" value="{{old('LAST_NAME')}}">
             <br>
 
-            <label for="NAME"> Nombre: </label>
+            <label for="NAME"> Nombre: </label><br>
             <input class="controls" type="text" name="NAME" id="name" placeholder="Juan Pablo" value="{{ old('NAME')}}">
-            <br>
-
+            
             <button type="submit">Crear usuario</button>
-            <br>
             <button type="submit">Cancelar</button>
             <br>
-
         </form>
+        <br>
 @endsection
 

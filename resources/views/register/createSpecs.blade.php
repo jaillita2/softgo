@@ -56,11 +56,11 @@
                             echo "</div>";
         }
         ?>
-=======
-        <h1>PUBLICAR PLIEGO DE ESPECIFICACION</h1>
+
+        <h1>Publicar pliego de especificaciones</h1>
 
         <div class="form-group">
-            <label for="TITULO_ESP">Titulo</label><br>
+            <label for="TITULO_ESP">Título:</label><br>
             <input type="text" class="form-control" id="titulo_esp" name="TITULO_ESP" placeholder="Ingrese el Titulo">
         </div>
 
@@ -79,18 +79,18 @@
         </div>
 
         <div class="form-group ">
-            <label for="DESCRIP_ESP">Descripcion:</label><br>
+            <label for="DESCRIP_ESP">Descripción :</label><br>
             <textarea class="form-control" id="descrip_esp" name="DESCRIP_ESP" rows="8"></textarea>
         </div>
 
-        <div class="form-group ">
+        <div class="Adjuntar ">
             <label for="DOC_ESP">Adjuntar Archivo:</label><br>
-            <input type="file" id="archivoESP" name="DOC_ESP">
+            <input type="file"class="Adjuntar" id="archivoESP" name="DOC_ESP">
         </div>
 
         <div class="form-group ">
             <button class="btn btn-success" id="btnAgregar">Publicar</button>
-            <button class="btn btn-warnig" id="btnCancelar">Eliminar</button>
+            <button class="btn btn-warnig" id="btnCancelar">Cancelar</button>
         </div>
 
 
