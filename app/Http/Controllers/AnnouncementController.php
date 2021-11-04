@@ -20,6 +20,8 @@ class AnnouncementController extends Controller
         $CONVOCATORIA->DOC_CONV=$request->DOC_CONV;
 
         $CONVOCATORIA->save();
+        return redirect('/');
+
 
     }
 
