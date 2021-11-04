@@ -37,7 +37,6 @@ class EspecificacionesController extends Controller
     {
         $datosEsp = request()->except('_token');
         especificaciones::insert($datosEsp);
-        return response()->json($datosEsp);
         return redirect('/');
 
     }
