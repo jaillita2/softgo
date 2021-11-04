@@ -39,9 +39,10 @@ class UserCreateController extends Controller
     {
         //
 
-        $datosUsers = request()->except('_token');
-        User_Create::insert($datosUsers);
-        return response()->json($datosUsers);
+       $datosUsers = request()->except('_token');
+       User_Create::insert($datosUsers);
+       return response()->json($datosUsers);
+       return redirect('/');
 
     }
 
