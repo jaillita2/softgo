@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'Specs')
+@section('title', 'Convocatoria')
 
 @section('content')
 <link rel="stylesheet" href="/css/convocatoria.css" class="rel">

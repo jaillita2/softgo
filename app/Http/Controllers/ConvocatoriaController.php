@@ -36,6 +36,10 @@ class ConvocatoriaController extends Controller
     public function store(Request $request)
     {
         $datosConv = request()->except('_token');
+
+        if($request->hash_file('DOC_CONV')){
+            $datosConv['DOC_CONV']=$request->file('DOC_CONV')->store('uploads','public');
+        }
         Convocatoria::insert($datosConv);
         return response()->json($datosConv);
     }
