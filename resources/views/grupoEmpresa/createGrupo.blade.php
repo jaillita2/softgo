@@ -7,8 +7,7 @@
 
 <form class="form-register" method="post" action="{{ url('usersGrupo.store') }}">
 
-    <h1>Nueva cuenta</h1>
-    <h4>Crear un nuevo usuario y contraseña para acceder al sistema</h4>
+    <h1>Registro empresa</h1>
     @csrf
     <?php 
         if(isset($_POST['NOMBRE'])){
