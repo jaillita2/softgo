@@ -5,7 +5,11 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\EspecificacionesController;
 use App\Http\Controllers\SpecsController;
 use App\Http\Controllers\UserCreateController;
+use App\Http\Controllers\DocumentacionPropuestaController;
+use App\Http\Controllers\GrupoEmpresaController;
+use App\Http\Controllers\PlanPagosController;
 use App\Models\especificaciones;
+use App\Http\Controllers\MaterialApoyoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +36,14 @@ Route::post('especificaciones', [EspecificacionesController::class, 'store'])->n
 Route::get('especificaciones', [SpecsController::class, 'create']);
 
 Route::resource('users', UserCreateController::class);
+
+Route::get('MaterialApoyo', [MaterialApoyoController::class, 'create']);
+
+Route::post('MaterialApoyo', [MaterialApoyoController::class, 'store'])->name('MaterialApoyo.store');
+
+Route::get('Propuesta', [DocumentacionPropuestaController::class, 'create']);
+
+Route::get('Grupo', [GrupoEmpresaController::class, 'create']);
+Route::post('Grupo', [GrupEmpresaController::class, 'store'])->name('Grupo.store');
+
+Route::get('Pagos', [PlanPagosController::class, 'create']);

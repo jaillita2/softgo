@@ -23,6 +23,10 @@
                     <li><a href="{{ url('users') }}"> Registro usuario</a></li>
                     <li><a href="{{ url('convocatoria') }}"> Convocatoria</a></li>
                     <li><a href="{{ url('especificaciones') }}"> Especificaciones</a></li>
+                    <li><a href="{{ url('MaterialApoyo') }}"> Material de Apoyo</a></li>
+                    <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
+                    <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
+                    <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
                 </ul>
             </nav>
         </div>
