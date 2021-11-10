@@ -5,7 +5,7 @@
 @section('content')
 <link rel="stylesheet" href="/css/especificaciones.css" class="rel">
 <div class="container">
-    <form action="{{route('especificaciones.store')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('Propuesta.store')}}" method="post" enctype="multipart/form-data">
         @csrf
 
         <h1>Registrar documentacion propuesta</h1>
@@ -13,11 +13,6 @@
         <div class="form-group">
             <label for="NAME_P">Nombre:</label><br>
             <input type="text" class="form-control" id="titulo_esp" name="NAME_P" placeholder="Ingrese el Titulo">
-        </div>
-
-        <div class="form-group">
-            <label for="FECHA_P">Seleccionar Fecha:</label><br>
-            <input class="form-control" type="date" id="fecha_esp" name="FECHA_P" placeholder="Select date">
         </div>
 
         <div class="form-group">

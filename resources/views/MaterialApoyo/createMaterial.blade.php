@@ -16,13 +16,13 @@
         </div>
 
         <div class="form-group ">
-            <label for="DESCRIP_ESP">Descripción :</label><br>
-            <textarea class="form-control" id="descrip_esp" name="DESCRIP_ESP" rows="8"></textarea>
+            <label for="DESCRIP_APO">Descripción :</label><br>
+            <textarea class="form-control" id="descrip_apo" name="DESCRIP_APO" rows="8"></textarea>
         </div>
 
         <div class="Adjuntar ">
             <label for="DOC_APO">Adjuntar Archivo:</label><br>
-            <input type="file"class="Adjuntar" id="archivoAPO" name="DOC_APO">
+            <input type="file"class="Adjuntar" id="DOC_APO" name="DOC_APO">
         </div>
 
         <div class="form-group ">

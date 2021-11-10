@@ -35,7 +35,13 @@ class DocumentacionPropuestaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datosP = request()->except('_token');
+
+        if($request->hasfile('DOC_P')){
+            $datosP['DOC_P']=$request->file('DOC_P')->store('uploads','public');
+        }
+        documentacionPropuesta::insert($datosP);
+        return response()->json($datosP); 
     }
 
     /**
