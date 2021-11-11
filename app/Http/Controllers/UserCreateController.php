@@ -39,11 +39,11 @@ class UserCreateController extends Controller
      */
     public function store(StoreUser $request)
     {
-        //
 
        $datosUsers = request()->except('_token');
        User_Create::insert($datosUsers);
        /*return response()->json($datosUsers);*/
+       session()-> flash('exito', 'LA OPERACION SE REALIZO CON EXITO');
        return redirect('/');
 
     }

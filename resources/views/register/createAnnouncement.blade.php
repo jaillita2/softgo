@@ -11,7 +11,7 @@
         <h1>Publicar convocatoria</h1>
         <div class="form-group">
             <label for="TITULO_CONV">Título:</label><br>
-            <input type="text" class="form-control" id="titulo_conv" name="TITULO_CONV" placeholder="Ingrese el Titulo">
+            <input type="text" class="form-control" id="titulo_conv" name="TITULO_CONV" placeholder="Ingrese el Titulo" value="{{ old('TITULO_CONV')}}">
             @error('TITULO_CONV')
                 <br>
                     <small>*{{$message}}</small>
@@ -22,7 +22,7 @@
 
         <div class="form-group">
             <label for="FECHA_CONV">Seleccionar Fecha:</label><br>
-            <input class="form-control" type="date" id="fecha_conv" name="FECHA_CONV" placeholder="Select date">
+            <input class="form-control" type="date" id="fecha_conv" name="FECHA_CONV" placeholder="Select date" value="{{ old('FECHA_CONV')}}">
             @error('FECHA_CONV')
                 <br>
                     <small>*{{$message}}</small>
