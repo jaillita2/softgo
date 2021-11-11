@@ -14,7 +14,7 @@ class GrupoEmpresaController extends Controller
      */
     public function index()
     {
-        //
+        return view('grupoEmpresa.createGrupo');
     }
 
     /**
@@ -35,7 +35,10 @@ class GrupoEmpresaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $datosG = request()->except('_token');
+        grupoEmpresa::insert($datosG);
+        return response()->json($datosG);
+        return redirect('/');
     }
 
     /**
