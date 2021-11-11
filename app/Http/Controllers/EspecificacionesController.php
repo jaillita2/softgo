@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\especificaciones;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\StoreEspecificacion;
+
 class EspecificacionesController extends Controller
 {
     /**
@@ -33,8 +35,9 @@ class EspecificacionesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreEspecificacion $request)
     {
+        
         $datosEsp = request()->except('_token');
         
         if($request->hasfile('DOC_ESP')){

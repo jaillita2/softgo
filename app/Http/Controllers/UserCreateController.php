@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User_Create;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\StoreUser;
+
 class UserCreateController extends Controller
 {
     /**
@@ -35,7 +37,7 @@ class UserCreateController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUser $request)
     {
 
        $datosUsers = request()->except('_token');

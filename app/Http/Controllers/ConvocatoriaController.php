@@ -35,6 +35,10 @@ class ConvocatoriaController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'TITULO_CONV'=> 'required'
+        ]);
+
         $datosConv = request()->except('_token');
 
         if($request->hasfile('DOC_CONV')){
