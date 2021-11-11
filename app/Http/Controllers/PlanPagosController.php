@@ -35,13 +35,7 @@ class PlanPagosController extends Controller
      */
     public function store(Request $request)
     {
-        $datosPlan = request()->except('_token');
-
-        if($request->hasfile('DOC_PLAN')){
-            $datosPlan['DOC_PLAN']=$request->file('DOC_PLAN')->store('uploads','public');
-        }
-        planPagos::insert($datosPlan);
-        return response()->json($datosPlan); 
+        //
     }
 
     /**
