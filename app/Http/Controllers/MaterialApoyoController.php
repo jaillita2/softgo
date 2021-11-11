@@ -35,13 +35,7 @@ class MaterialApoyoController extends Controller
      */
     public function store(Request $request)
     {
-        $datosApo = request()->except('_token');
-
-        if($request->hasfile('DOC_APO')){
-            $datosApo['DOC_APO']=$request->file('DOC_APO')->store('uploads','public');
-        }
-        materialApoyo::insert($datosApo);
-        return response()->json($datosApo); 
+        //
     }
 
     /**

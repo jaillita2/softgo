@@ -37,7 +37,7 @@ class ConvocatoriaController extends Controller
     {
         $datosConv = request()->except('_token');
 
-        if($request->hasfile('DOC_CONV')){
+        if($request->hash_file('DOC_CONV')){
             $datosConv['DOC_CONV']=$request->file('DOC_CONV')->store('uploads','public');
         }
         Convocatoria::insert($datosConv);
