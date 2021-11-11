@@ -42,8 +42,6 @@ class ConvocatoriaController extends Controller
         }
         Convocatoria::insert($datosConv);
         return response()->json($datosConv);
-        session()-> flash('exito', 'LA OPERACION SE REALIZO CON EXITO');
-        return redirect('/');
     }
 
     /**

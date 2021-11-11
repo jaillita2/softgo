@@ -19,7 +19,8 @@ class AnnouncementController extends Controller
         }
         Convocatoria::insert($datosConv);
         return response()->json($datosConv);
-        
+        return redirect('/');
+
 
     }
 

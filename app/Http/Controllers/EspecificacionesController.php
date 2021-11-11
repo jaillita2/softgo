@@ -39,10 +39,9 @@ class EspecificacionesController extends Controller
         
         if($request->hasfile('DOC_ESP')){
             $datosConv['DOC_ESP']=$request->file('DOC_ESP')->store('uploads','public');
-       }
+        }
 
         especificaciones::insert($datosEsp);
-        session()-> flash('exito', 'LA OPERACION SE REALIZO CON EXITO');
         return redirect('/');
 
     }
