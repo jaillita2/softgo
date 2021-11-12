@@ -8,7 +8,6 @@
 
     <!--favicon-->
     <!--styles-->
-
 </head>
 <body>
 
@@ -18,6 +17,7 @@
         <div class="contanier logo-nav-contanier">
             <div id="logo"></div>
             <h1>UNIVERSIDAD MAYOR DE SAN SIMON</h1>
+            <span class="menu-icon">Menu</span>
             <nav class="navigation">
                 <ul>
                     <li><a href="{{ url('users') }}"> Registro usuario</a></li>
@@ -47,5 +47,8 @@
 
     </footer>
     <!--script-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/scripts.js"></script>
+
 </body>
 </html>

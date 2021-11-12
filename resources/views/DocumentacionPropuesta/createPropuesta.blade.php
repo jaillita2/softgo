@@ -12,7 +12,13 @@
 
         <div class="form-group">
             <label for="NAME_P">Nombre:</label><br>
-            <input type="text" class="form-control" id="titulo_esp" name="NAME_P" placeholder="Ingrese el Titulo">
+            <input type="text" class="form-control" id="titulo_esp" name="NAME_P" placeholder="Ingrese el Titulo" value="{{old('NAME_P')}}">
+            @error('NAME_P')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
         </div>
 
 
@@ -23,23 +29,34 @@
                 <option value="1">1º Semestre</option>
                 <option value="2">2º Semestre</option>
             </select>
+            @error('SEMESTRE_P')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
         </div>
 
         <div class="form-group ">
             <label for="DESCRIP_P">Descripción :</label><br>
-            <textarea class="form-control" id="descrip_p" name="DESCRIP_P" rows="8"></textarea>
+            <textarea class="form-control" id="descrip_p" name="DESCRIP_P" rows="8"></textarea value="{{old('DESCRIP_P')}}">
         </div>
 
         <div class="Adjuntar ">
             <label for="DOC_P">Adjuntar Archivo:</label><br>
-            <input type="file"class="Adjuntar" id="archivoP" name="DOC_P">
+            <input type="file"class="Adjuntar" id="archivoP" name="DOC_P" value="{{old('DOC_P')}}">
+            @error('DOC_P')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>   
         </div>
 
         <div class="form-group ">
             <button class="btn btn-success" id="btnAgregar">Publicar</button>
-            <button class="btn btn-warnig" id="btnCancelar">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
         </div>
-
 
     </form>
 </div>

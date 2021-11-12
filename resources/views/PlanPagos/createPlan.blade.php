@@ -12,7 +12,7 @@
 
         <div class="form-group">
         <label for="TITULO_PLAN">Titulo: </label><br>
-            <input type="text" class="form-control" id="titulo_plan" name="TITULO_PLAN" placeholder="Ingrese el titulo">
+            <input type="text" class="form-control" id="titulo_plan" name="TITULO_PLAN" placeholder="Ingrese el titulo" value="{{old('TITULO_PLAN')}}">
             @error('TITULO_PLAN')
                 <br>
                     <small>*{{$message}}</small>
@@ -39,7 +39,7 @@
 
         <div class="form-group ">
             <button class="btn btn-success" id="btnAgregar">Publicar</button>
-            <button class="btn btn-warnig" id="btnCancelar">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
         </div>
 
 

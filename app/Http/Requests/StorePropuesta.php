@@ -13,7 +13,7 @@ class StorePropuesta extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class StorePropuesta extends FormRequest
     public function rules()
     {
         return [
-            //
+            'NAME_P'=> 'required|max:30',
+            'SEMESTRE_P'=> 'required',
+            'DOC_P'=> 'required'
         ];
     }
 }

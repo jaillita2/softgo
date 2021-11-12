@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'Main')
+@section('title', 'SISTEMA TIS')
 
 @section('content')
 <!doctype html>

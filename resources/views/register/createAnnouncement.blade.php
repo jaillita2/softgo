@@ -64,7 +64,7 @@
 
         <div class="form-group ">
             <button class="btn btn-success" id="btnAgregar">Publicar</button>
-            <button class="btn btn-warnig" id="btnCancelar">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
         </div>
         <br>
 

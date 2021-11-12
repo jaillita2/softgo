@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class User_Create extends Model
 {
     use HasFactory;
+
 }
+
+

@@ -24,7 +24,7 @@ class StorePlan extends FormRequest
     public function rules()
     {
         return [
-            'TITULO_PLAN'=> 'required',
+            'TITULO_PLAN'=> 'required|max:30',
             'DOC_PLAN'=> 'required'
         ];
     }

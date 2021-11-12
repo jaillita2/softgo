@@ -13,7 +13,7 @@ class StoreMaterial extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,7 @@ class StoreMaterial extends FormRequest
     public function rules()
     {
         return [
-            //
+            'TITULO_APO'=> 'required|max:30'
         ];
     }
 }

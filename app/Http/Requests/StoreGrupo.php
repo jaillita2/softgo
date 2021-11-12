@@ -13,7 +13,7 @@ class StoreGrupo extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class StoreGrupo extends FormRequest
     public function rules()
     {
         return [
-            //
+            'NAME_EMP'=> 'required|max:25|unique:grupo_empresas',
+            'EMAIL_DOCE'=> 'required|max:30|unique:grupo_empresas|email',
+            'DIRECCION'=> 'required|max:30',
+            'TELEFONO'=> 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:18'
         ];
     }
 }
