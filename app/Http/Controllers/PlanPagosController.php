@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\planPagos;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\StorePlan;
+
 class PlanPagosController extends Controller
 {
     /**
@@ -33,7 +35,7 @@ class PlanPagosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePlan $request)
     {
         $datosPlan = request()->except('_token');
 
@@ -41,7 +43,8 @@ class PlanPagosController extends Controller
             $datosPlan['DOC_PLAN']=$request->file('DOC_PLAN')->store('uploads','public');
         }
         planPagos::insert($datosPlan);
-        return response()->json($datosPlan); 
+        session()-> flash('exito', 'El plan de pagos se registo de forma correcta');
+        return redirect('/');
     }
 
     /**

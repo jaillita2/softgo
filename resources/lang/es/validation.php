@@ -146,6 +146,8 @@ return [
         'TITULO_CONV'=> 'titulo de convocatoria',
         'FECHA_CONV'=> 'fecha',
         'SEMESTRE_CONV'=> 'semestre',
-        'DOC_CONV'=> 'archivo de convocatoria'
+        'DOC_CONV'=> 'archivo de convocatoria',
+        'TITULO_PLAN'=> 'titulo del plan de pagos',
+        'DOC_PLAN'=> 'archivo de plan de pagos'
     ],
 ];

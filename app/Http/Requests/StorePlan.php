@@ -13,7 +13,7 @@ class StorePlan extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class StorePlan extends FormRequest
     public function rules()
     {
         return [
-            //
+            'TITULO_PLAN'=> 'required',
+            'DOC_PLAN'=> 'required'
         ];
     }
 }

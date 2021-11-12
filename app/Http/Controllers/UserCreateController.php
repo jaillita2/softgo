@@ -43,7 +43,7 @@ class UserCreateController extends Controller
        $datosUsers = request()->except('_token');
        User_Create::insert($datosUsers);
        /*return response()->json($datosUsers);*/
-       session()-> flash('exito', 'LA OPERACION SE REALIZO CON EXITO');
+       session()-> flash('exito', 'Usuario registrado');
        return redirect('/');
 
     }

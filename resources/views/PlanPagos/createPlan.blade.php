@@ -13,6 +13,12 @@
         <div class="form-group">
         <label for="TITULO_PLAN">Titulo: </label><br>
             <input type="text" class="form-control" id="titulo_plan" name="TITULO_PLAN" placeholder="Ingrese el titulo">
+            @error('TITULO_PLAN')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
         </div>
 
         <div class="form-group">
@@ -23,6 +29,12 @@
         <div class="Adjuntar ">
         <label for="DOC_PLAN">Adjuntar Archivo:</label><br>
             <input type="file"class="Adjuntar" id="archivoPLAN" name="DOC_PLAN">
+            @error('DOC_PLAN')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
         </div>
 
         <div class="form-group ">

@@ -45,7 +45,7 @@ class ConvocatoriaController extends Controller
             $datosConv['DOC_CONV']=$request->file('DOC_CONV')->store('uploads','public');
         }
         Convocatoria::insert($datosConv);
-        session()-> flash('exito', 'LA OPERACION SE REALIZO CON EXITO');
+        session()-> flash('exito', 'Convocatoria guardada con exito');
         return redirect('/');
     }
 
