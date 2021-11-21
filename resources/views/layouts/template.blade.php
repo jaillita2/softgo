@@ -27,6 +27,8 @@
                     <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
                     <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
                     <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
+                    <li><a href="{{ url('Listar') }}"> listar Documentos</a></li>
+                    <li><a href="{{ url('Listarr') }}"> listar Especificaciones</a></li>
                 </ul>
             </nav>
         </div>
