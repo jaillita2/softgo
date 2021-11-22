@@ -12,6 +12,7 @@ use App\Http\Controllers\L_convocatoriascontroller;
 use App\Http\Controllers\L_especificacionescontroller;
 use App\Models\especificaciones;
 use App\Http\Controllers\MaterialApoyoController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,3 +56,5 @@ Route::post('Listar', [L_convocatoriascontroller::class, 'store'])->name('L_conv
 
 Route::get('Listarr', [L_especificacionescontroller::class, 'index']);
 Route::post('Listarr', [L_especificacionescontroller::class, 'store'])->name('L_especificaiones.store');
+
+
