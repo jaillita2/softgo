@@ -7,6 +7,7 @@ use App\Http\Controllers\SpecsController;
 use App\Http\Controllers\UserCreateController;
 use App\Http\Controllers\DocumentacionPropuestaController;
 use App\Http\Controllers\GrupoEmpresaController;
+use App\Http\Controllers\SesionController;
 use App\Http\Controllers\PlanPagosController;
 use App\Models\especificaciones;
 use App\Http\Controllers\MaterialApoyoController;
@@ -46,3 +47,13 @@ Route::post('Grupo', [GrupoEmpresaController::class, 'store'])->name('Grupo.stor
 
 Route::get('Pagos', [PlanPagosController::class, 'create']);
 Route::post('Pagos', [PlanPagosController::class, 'store'])->name('Pagos.store');
+
+Route::get('Sesion', [UserCreateController::class, 'create']);
+Route::post('Sesion', function(){
+    $credentials = request()->only('NAME_USER', 'PASSWD_USER');
+
+        if (Auth::attempt($credentials)) {
+            return 'loggin';
+        }
+        return 'no log';
+});

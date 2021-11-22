@@ -54,7 +54,7 @@
 
         <div class="Adjuntar ">
             <label for="DOC_ESP">Adjuntar Archivo:</label><br>
-            <input type="file"class="Adjuntar" id="archivoESP" name="DOC_ESP" value="{{ old('DOC_ESP')}}">
+            <input type="file"class="Adjuntar" id="doc_esp" name="DOC_ESP" value="{{ old('DOC_ESP')}}">
             @error('DOC_ESP')
                 <br>
                     <small>*{{$message}}</small>

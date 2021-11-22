@@ -21,21 +21,47 @@
             <nav class="navigation">
                 <ul>
                     <li><a href="{{ url('users') }}"> Registro usuario</a></li>
-                    <li><a href="{{ url('convocatoria') }}"> Convocatoria</a></li>
-                    <li><a href="{{ url('especificaciones') }}"> Especificaciones</a></li>
-                    <li><a href="{{ url('MaterialApoyo') }}"> Material de Apoyo</a></li>
-                    <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
-                    <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
-                    <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
-                    <li><a href="{{ url('Sesion') }}"> Inicio de sesion</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <!--nav-->
 
-    @yield('content')
+    <link rel="stylesheet" href="/css/especificaciones.css" class="rel">
+    <div class="container">
+        <form method="post">
+            <h1>Inicio de sesion</h1>
 
+            @csrf
+            <div class="form-group">
+            <label for="NAME_USER"> Nombre de usuario: </label><br>
+            <input class="controls" type="text" name="NAME_USER" id="username" placeholder="Juan_Perez" value="{{ old('NAME_USER')}}">
+            @error('NAME_USER')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+            <br>
+            </div>
+
+            <div class="form-group">
+            <label for="PASSWD_USER"> Contraseña: </label><br>
+            <input class="controls" type="password" name="PASSWD_USER" id="passwd" placeholder="contraseña" value="{{ old('PASSWD_USER')}}">
+            @error('PASSWD_USER')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+            </div>
+
+            <button type="submit">Iniciar sesion</button>
+            <!--<button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>-->
+            
+            <br>
+        </form>
+    </div>
     <footer class="footer">
         <link rel="stylesheet" href="/css/style.css" class="rel">
             <div class="contaniers">

@@ -156,6 +156,8 @@ return [
         'TELEFONO'=> 'telefono',
         'NAME_P'=> 'nombre de propuesta',
         'SEMESTRE_P'=> 'semestre de propuesta',
-        'DOC_P'=> 'archivo de propuesta'
+        'DOC_P'=> 'archivo de propuesta',
+        'SOCIOS'=> 'nombre de socios',
+        'ENC_GR'=> 'nombre de encargado'
     ],
 ];

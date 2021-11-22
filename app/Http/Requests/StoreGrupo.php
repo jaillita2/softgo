@@ -27,7 +27,9 @@ class StoreGrupo extends FormRequest
             'NAME_EMP'=> 'required|max:25|unique:grupo_empresas',
             'EMAIL_DOCE'=> 'required|max:30|unique:grupo_empresas|email',
             'DIRECCION'=> 'required|max:30',
-            'TELEFONO'=> 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:18'
+            'TELEFONO'=> 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:18',
+            'SOCIOS'=> 'required|max:400',
+            'ENC_GR'=> 'required|max:20|unique:grupo_empresas'
         ];
     }
 }

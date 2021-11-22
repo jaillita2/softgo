@@ -27,7 +27,7 @@ class StoreEspecificacion extends FormRequest
             'TITULO_ESP'=> 'required|max:30',
             'FECHA_ESP'=> 'required',
             'SEMESTRE_ESP'=> 'required',
-            'DOC_ESP'=> 'required|max:60'
+            'DOC_ESP'=> 'required'
         ];
     }
 }

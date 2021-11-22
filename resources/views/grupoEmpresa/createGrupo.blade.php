@@ -50,10 +50,30 @@
                 <br>
             @enderror
             <br>
-        </div>   
+        </div>  
+        <div class="form-group">
+            <label for="ENC_GR">Representante:</label><br>
+            <input type="text" class="form-control" id="enc_gr" name="ENC_GR" placeholder="Encargado de grupo" value="{{old('ENC_GR')}}">
+            @error('ENC_GR')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+        </div>
+        <div class="form-group ">
+            <label for="SOCIOS">Socios:</label><br>
+            <textarea class="form-control" id="socios" name="SOCIOS" placeholder="Armando Carpa Porsillueve" rows="8"></textarea>
+            @error('SOCIOS')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+        </div> 
 
     <div class="form-group ">
-            <button class="btn btn-success" id="btnAgregar">Publicar</button>
+            <button class="btn btn-success" id="btnAgregar">Guardar</button>
             <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
         </div>
 

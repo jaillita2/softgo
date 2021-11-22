@@ -27,7 +27,7 @@ class StoreConvocatoria extends FormRequest
             'TITULO_CONV'=> 'required|max:30',
             'FECHA_CONV'=> 'required',
             'SEMESTRE_CONV'=> 'required',
-            'DOC_CONV'=> 'required|max:60'
+            'DOC_CONV'=> 'required'
         ];
     }
 }

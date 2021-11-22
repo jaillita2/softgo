@@ -28,7 +28,7 @@ class UserCreateController extends Controller
     public function create()
     {
         //
-        return view('register.createUser');
+        return view('sesion.sesion');
     }
 
     /**
