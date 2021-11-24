@@ -47,10 +47,11 @@ input[type="file"] {
 }
 
 .container button{
+    color:aliceblue;
     padding: 5px;
     margin: center;
     margin-top: 10px;
-    background-color:blue;
+    background-color:rgb(10, 10, 10);
     width: 20%;
     border-radius: 5px;
   }
