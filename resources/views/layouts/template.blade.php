@@ -27,7 +27,7 @@
                     <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
                     <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
                     <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
-                    <li><a href="{{ url('Sesion') }}"> Inicio de sesion</a></li>
+                    <!-- <li><a href="{{ url('Sesion') }}"> Inicio de sesion</a></li> -->
                 </ul>
             </nav>
         </div>

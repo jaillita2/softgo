@@ -48,12 +48,3 @@ Route::post('Grupo', [GrupoEmpresaController::class, 'store'])->name('Grupo.stor
 Route::get('Pagos', [PlanPagosController::class, 'create']);
 Route::post('Pagos', [PlanPagosController::class, 'store'])->name('Pagos.store');
 
-Route::get('Sesion', [UserCreateController::class, 'create']);
-Route::post('Sesion', function(){
-    $credentials = request()->only('NAME_USER', 'PASSWD_USER');
-
-        if (Auth::attempt($credentials)) {
-            return 'loggin';
-        }
-        return 'no log';
-});
