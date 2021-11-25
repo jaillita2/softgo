@@ -7,9 +7,10 @@
 }
 
 .form-register button{
+    color:aliceblue;
     padding: 5px;
     margin: 60px;
-    background-color:#d8e0e0;
+    background-color:rgb(10, 10, 10);
     width: 20%;
     border-radius: 5px;
   }
@@ -21,12 +22,12 @@
     margin: 0 auto;
     width: 100%;
     max-width: 600px;
-    max-height:510px ;
     border-radius: 15px;
     margin-top: 30px;   
     margin-bottom: 60px;
     
 }
+
 
 .form-register h1 {
     font-size: 30px;

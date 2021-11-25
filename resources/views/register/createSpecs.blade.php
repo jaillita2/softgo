@@ -54,7 +54,7 @@
 
         <div class="Adjuntar ">
             <label for="DOC_ESP">Adjuntar Archivo:</label><br>
-            <input type="file"class="Adjuntar" id="archivoESP" name="DOC_ESP" value="{{ old('DOC_ESP')}}">
+            <input type="file"class="Adjuntar" id="doc_esp" name="DOC_ESP" value="{{ old('DOC_ESP')}}">
             @error('DOC_ESP')
                 <br>
                     <small>*{{$message}}</small>
@@ -65,7 +65,7 @@
 
         <div class="form-group ">
             <button class="btn btn-success" id="btnAgregar">Publicar</button>
-            <button class="btn btn-warnig" id="btnCancelar">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
         </div>
 
 

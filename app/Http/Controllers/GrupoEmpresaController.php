@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\grupoEmpresa;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\StoreGrupo;
+
 class GrupoEmpresaController extends Controller
 {
     /**
@@ -14,7 +16,7 @@ class GrupoEmpresaController extends Controller
      */
     public function index()
     {
-        //
+        return view('grupoEmpresa.createGrupo');
     }
 
     /**
@@ -33,9 +35,12 @@ class GrupoEmpresaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreGrupo $request)
     {
-        //
+        $datosG = request()->except('_token');
+        grupoEmpresa::insert($datosG);
+        session()-> flash('exito', 'Nombre de Grupo-Empresa registrado');
+       return redirect('/');
     }
 
     /**

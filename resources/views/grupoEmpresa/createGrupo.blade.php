@@ -3,30 +3,81 @@
 @section('title', 'Grupo-Empresa')
 
 @section('content')
-<link rel="stylesheet" href="/css/usuario.css" class="rel">
+<link rel="stylesheet" href="/css/especificaciones.css" class="rel">
+<div class="container">
+<form action="{{route('Grupo.store')}}" method="post" enctype="multipart/form-data">
+    <h1>Registro de Grupo-Empresa</h1>
+        @csrf
+        <div class="form-group">
+            <label for="NAME_EMP">Nombre de empresa:</label><br>
+            <input type="text" class="form-control" id="nombre_emp" name="NAME_EMP" placeholder="Ingrese el Nombre de la empresa" value="{{old('NAME_EMP')}}">
+            @error('NAME_EMP')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+        </div>
 
-<form class="form-register" method="post" action="{{ url('usersGrupo.store') }}">
+        <div class="form-group">
+            <label for="EMAIL_DOCE">Correo electronico:</label><br>
+            <input type="email" class="form-control" id="emailDoce" name="EMAIL_DOCE" placeholder="Ingrese el Email" value="{{old('EMAIL_DOCE')}}">
+            @error('EMAIL_DOCE')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+        </div>
 
-    <h1>Registro empresa</h1>
-    @csrf
-    <label for="NAME_EMP"> Nombre de empresa: </label><br>
-    <input class="controls" type="text" name="NAME_EMP" id="empname" placeholder="SofGo" value="{{ old('NAME_EMP')}}"><br>
+        <div class="form-group">
+            <label for="DIRECCION">Direccion:</label><br>
+            <input type="text" class="form-control" id="direccion" name="DIRECCION" placeholder="Ingrese la Direccion" value="{{old('DIRECCION')}}">
+            @error('DIRECCION')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+        </div>
+
+        <div class="form-group">
+            <label for="TELEFONO">Telefono:</label><br>
+            <input type="text" class="form-control" id="telefono" name="TELEFONO" placeholder="+59171618999" value="{{old('TELEFONO')}}">
+            @error('TELEFONO')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+        </div>  
+        <div class="form-group">
+            <label for="ENC_GR">Representante:</label><br>
+            <input type="text" class="form-control" id="enc_gr" name="ENC_GR" placeholder="Encargado de grupo" value="{{old('ENC_GR')}}">
+            @error('ENC_GR')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+        </div>
+        <div class="form-group ">
+            <label for="SOCIOS">Socios:</label><br>
+            <textarea class="form-control" id="socios" name="SOCIOS" placeholder="Armando Carpa Porsillueve" rows="8"></textarea>
+            @error('SOCIOS')
+                <br>
+                    <small>*{{$message}}</small>
+                <br>
+            @enderror
+            <br>
+        </div> 
+
+    <div class="form-group ">
+            <button class="btn btn-success" id="btnAgregar">Guardar</button>
+            <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
+        </div>
 
 
-    <label for="EMAIL"> Correo electronico: </label><br>
-    <input class="controls" type="email" name="EMAIL" id="email" placeholder="juanperez@example.com" value="{{ old('EMAIL')}}">
-    <br>
-
-    <label for="DIRECCION"> Direccion: </label><br>
-    <input class="controls" type="text" name="DIRECCION" id="direccion" placeholder="Av. Melchor Pinto" value="{{old('DIRECCION')}}">
-    <br>
-
-    <label for="TELEFONO"> Telefono: </label><br>
-    <input class="controls" type="text" name="TELEFONO" id="telefono" placeholder="+59172758959" value="{{ old('TELEFONO')}}">
-    
-    <button type="submit">Crear usuario</button>
-    <button type="submit">Cancelar</button>
-    <br>
-</form>
-<br>
+    </form>
+</div>
 @endsection

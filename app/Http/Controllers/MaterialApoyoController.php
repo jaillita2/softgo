@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\materialApoyo;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\StoreMaterial;
+
 class MaterialApoyoController extends Controller
 {
     /**
@@ -33,9 +35,17 @@ class MaterialApoyoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreMaterial $request)
     {
-        //
+        $datosApo = request()->except('_token');
+
+        if($request->hasfile('DOC_APO')){
+            $datosApo['DOC_APO']=$request->file('DOC_APO')->store('uploads','public');
+        }
+        materialApoyo::insert($datosApo);
+        session()-> flash('exito', 'Se guardo el material de apoyo');
+        return redirect('/');
+
     }
 
     /**

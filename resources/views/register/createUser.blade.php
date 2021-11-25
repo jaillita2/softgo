@@ -8,6 +8,7 @@
 
         <form class="form-register" method="post" action="{{ url('users') }}">
 
+        <div id="register">
             <h1>Nueva cuenta</h1>
             <h4>Crear un nuevo usuario y contraseña para acceder al sistema</h4>
             @csrf
@@ -79,9 +80,10 @@
             </div>
             
             <button type="submit">Crear usuario</button>
-            <button type="submit">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
+            
             <br>
+            </div>
         </form>
-        <br>
 @endsection
 

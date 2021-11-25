@@ -22,7 +22,7 @@ class AnnouncementController extends Controller
             $datosConv['DOC_CONV']=$request->file('DOC_CONV')->store('uploads','public');
         }
         Convocatoria::insert($datosConv);
-        return response()->json($datosConv);
+        session()-> flash('exito', 'Convocatoria guardada con exito');
         return redirect('/');
 
 

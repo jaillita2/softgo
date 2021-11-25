@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\documentacionPropuesta;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\StorePropuesta;
+
 class DocumentacionPropuestaController extends Controller
 {
     /**
@@ -33,9 +35,16 @@ class DocumentacionPropuestaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePropuesta $request)
     {
-        //
+        $datosP = request()->except('_token');
+
+        if($request->hasfile('DOC_P')){
+            $datosP['DOC_P']=$request->file('DOC_P')->store('uploads','public');
+        }
+        documentacionPropuesta::insert($datosP);
+        session()-> flash('exito', 'Propuesta registrada exitosamente');
+       return redirect('/');
     }
 
     /**
