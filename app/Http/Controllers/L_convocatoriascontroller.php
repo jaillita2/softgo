@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\L_convocatorias;
 use GuzzleHttp\Psr7\UploadedFile;
-use store\app\public\uploads;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
