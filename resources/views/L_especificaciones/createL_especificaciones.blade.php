@@ -26,8 +26,8 @@
                         <td>{{$l->TITULO_ESP}}</td>
                         <td>{{$l->SEMESTRE_ESP}}</td>
                         <td>{{$l->FECHA_ESP}}</td>
-                        {{-- <td><a href="/storage/{{$l->DOC_ESP}}" target="_blank">archivo</a></td> --}}
-                        <td>{{$l->DOC_ESP}}</td>
+                        <td><a href="/storage/{{$l->DOC_ESP}}" target="_blank">archivo</a></td>
+                        {{-- <td>{{$l->DOC_ESP}}</td> --}}
                     </tr>
                     @endforeach
 

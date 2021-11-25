@@ -37,9 +37,9 @@ class EspecificacionesController extends Controller
      */
     public function store(StoreEspecificacion $request)
     {
-        
+
         $datosEsp = request()->except('_token');
-        
+
         if($request->hasfile('DOC_ESP')){
             $datosEsp['DOC_ESP']=$request->file('DOC_ESP')->store('uploads','public');
         }
@@ -48,7 +48,6 @@ class EspecificacionesController extends Controller
         return redirect('/');
 
     }
-
     /**
      * Display the specified resource.
      *
