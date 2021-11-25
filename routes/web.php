@@ -9,8 +9,11 @@ use App\Http\Controllers\DocumentacionPropuestaController;
 use App\Http\Controllers\GrupoEmpresaController;
 use App\Http\Controllers\SesionController;
 use App\Http\Controllers\PlanPagosController;
+use App\Http\Controllers\L_convocatoriascontroller;
+use App\Http\Controllers\L_especificacionesController;
 use App\Models\especificaciones;
 use App\Http\Controllers\MaterialApoyoController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,4 +50,12 @@ Route::post('Grupo', [GrupoEmpresaController::class, 'store'])->name('Grupo.stor
 
 Route::get('Pagos', [PlanPagosController::class, 'create']);
 Route::post('Pagos', [PlanPagosController::class, 'store'])->name('Pagos.store');
+
+Route::get('Pagos', [PlanPagosController::class, 'create']);
+
+Route::get('Listar', [L_convocatoriascontroller::class, 'index']);
+Route::post('Listar', [L_convocatoriascontroller::class, 'store'])->name('L_convocatorias.store');
+
+Route::get('Listarr', [L_especificacionesController::class, 'index']);
+Route::post('Listarr', [L_especificacionesController::class, 'store'])->name('L_especificaiones.store');
 

@@ -12,6 +12,7 @@
     margin: 0 auto;
     width: 100%;
     max-width: 600px;
+    max-height:560px ;
     border-radius: 15px;
     margin-top: 30px;
     margin-bottom: 60px;
@@ -20,7 +21,7 @@
 .form-control, select{
     border-radius: solido 1px #ccc ;
     padding: 4px;
-    width: 400px;
+    width: 475px;
     border-radius: 5px;
 
 }
@@ -46,11 +47,11 @@ input[type="file"] {
 }
 
 .container button{
-    color: aliceblue;
+    color:aliceblue;
     padding: 5px;
-    margin: 60px;
-    background-color:rgb(12, 12, 12);
+    margin: center;
+    margin-top: 10px;
+    background-color:rgb(10, 10, 10);
     width: 20%;
     border-radius: 5px;
   }
-

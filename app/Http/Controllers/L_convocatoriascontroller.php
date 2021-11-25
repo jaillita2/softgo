@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\especificaciones;
+use App\Models\L_convocatorias;
+use GuzzleHttp\Psr7\UploadedFile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
-use App\Http\Requests\StoreEspecificacion;
 
-class EspecificacionesController extends Controller
+
+class L_convocatoriascontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +21,11 @@ class EspecificacionesController extends Controller
      */
     public function index()
     {
-        //
+        $query= DB::table('convocatorias')
+        ->get();
+        return view('L_convocatorias.createL_convocatorias',['listado'=>$query]);
+
+
     }
 
     /**
@@ -26,7 +35,8 @@ class EspecificacionesController extends Controller
      */
     public function create()
     {
-        return view('register.createSpecs');
+        return view('L_convocatorias.createL_convocatorias');
+
     }
 
     /**
@@ -35,28 +45,18 @@ class EspecificacionesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreEspecificacion $request)
+    public function store(Request $request)
     {
 
-        $datosEsp = request()->except('_token');
-
-        if($request->hasfile('DOC_ESP')){
-            $datosEsp['DOC_ESP']=$request->file('DOC_ESP')->store('uploads','public');
-        }
-        
-
-        especificaciones::insert($datosEsp);
-        session()-> flash('exito', 'La especificacion se guardo con exito');
-        return redirect('/');
-
     }
+
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\especificaciones  $especificaciones
+     * @param  \App\Models\L_convocatorias  $L_convocatorias
      * @return \Illuminate\Http\Response
      */
-    public function show(especificaciones $especificaciones)
+    public function show(L_convocatorias $L_convocatorias)
     {
         //
     }
@@ -64,10 +64,10 @@ class EspecificacionesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\especificaciones  $especificaciones
+     * @param  \App\Models\L_convocatorias  $L_convocatorias
      * @return \Illuminate\Http\Response
      */
-    public function edit(especificaciones $especificaciones)
+    public function edit(L_convocatorias $L_convocatorias)
     {
         //
     }
@@ -76,10 +76,10 @@ class EspecificacionesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\especificaciones  $especificaciones
+     * @param  \App\Models\L_convocatorias  $L_convocatorias
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, especificaciones $especificaciones)
+    public function update(Request $request, L_convocatorias $L_convocatorias)
     {
         //
     }
@@ -87,10 +87,10 @@ class EspecificacionesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\especificaciones  $especificaciones
+     * @param  \App\Models\L_convocatorias  $L_convocatorias
      * @return \Illuminate\Http\Response
      */
-    public function destroy(especificaciones $especificaciones)
+    public function destroy(L_convocatorias $L_convocatorias)
     {
         //
     }

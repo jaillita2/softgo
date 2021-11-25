@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\especificaciones;
+use app\Models\L_especificaciones;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-use App\Http\Requests\StoreEspecificacion;
 
-class EspecificacionesController extends Controller
+
+use App\Http\Requests\StoreL_Especificacion;
+
+
+
+
+class L_especificacionesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +23,10 @@ class EspecificacionesController extends Controller
      */
     public function index()
     {
-        //
+        $query= DB::table('especificaciones')
+        ->get();
+        return view('L_especificaciones.createL_especificaciones',['listado'=>$query]);
+
     }
 
     /**
@@ -26,7 +36,7 @@ class EspecificacionesController extends Controller
      */
     public function create()
     {
-        return view('register.createSpecs');
+        return view('L_especificaciones.createL_especificaciones');
     }
 
     /**
@@ -35,28 +45,18 @@ class EspecificacionesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreEspecificacion $request)
+    public function store(Request $request)
     {
-
-        $datosEsp = request()->except('_token');
-
-        if($request->hasfile('DOC_ESP')){
-            $datosEsp['DOC_ESP']=$request->file('DOC_ESP')->store('uploads','public');
-        }
-        
-
-        especificaciones::insert($datosEsp);
-        session()-> flash('exito', 'La especificacion se guardo con exito');
-        return redirect('/');
-
+        return view('L_especificaciones.createL_especificaciones');
     }
+
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\especificaciones  $especificaciones
+     * @param  \App\Models\L_especificaciones  $L_especificaciones
      * @return \Illuminate\Http\Response
      */
-    public function show(especificaciones $especificaciones)
+    public function show(L_especificaciones $L_especificaciones)
     {
         //
     }
@@ -64,10 +64,10 @@ class EspecificacionesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\especificaciones  $especificaciones
+     * @param  \App\Models\L_especificaciones  $L_especificaciones
      * @return \Illuminate\Http\Response
      */
-    public function edit(especificaciones $especificaciones)
+    public function edit(L_especificaciones $L_especificaciones)
     {
         //
     }
@@ -76,10 +76,10 @@ class EspecificacionesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\especificaciones  $especificaciones
+     * @param  \App\Models\L_especificaciones  $L_especificaciones
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, especificaciones $especificaciones)
+    public function update(Request $request, L_especificaciones $L_especificaciones)
     {
         //
     }
@@ -87,10 +87,10 @@ class EspecificacionesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\especificaciones  $especificaciones
+     * @param  \App\Models\L_especificaciones $L_especificaciones
      * @return \Illuminate\Http\Response
      */
-    public function destroy(especificaciones $especificaciones)
+    public function destroy(L_especificaciones $L_especificaciones)
     {
         //
     }

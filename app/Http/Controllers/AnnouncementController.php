@@ -9,7 +9,7 @@ use App\Http\Requests\StoreConvocatoria;
 
 class AnnouncementController extends Controller
 {
-    
+
     public function create(){
         return view('register.createAnnouncement');
     }
