@@ -36,7 +36,6 @@
             <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
         </div>
 
-
     </form>
 </div>
 @endsection

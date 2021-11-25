@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/css/especificaciones.css" class="rel">
 <div class="container">
 <form action="{{route('Grupo.store')}}" method="post" enctype="multipart/form-data">
-    <h1>Publicar material de apoyo</h1>
+    <h1>Registro de Grupo-Empresa</h1>
         @csrf
         <div class="form-group">
             <label for="NAME_EMP">Nombre de empresa:</label><br>
