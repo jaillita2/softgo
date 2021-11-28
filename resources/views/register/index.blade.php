@@ -3,7 +3,6 @@
 @section('title', 'SISTEMA TIS')
 
 @section('content')
-<link rel="stylesheet" href="/css/index.css" class="rel">
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,12 +21,8 @@
         </div>
     @endif
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      <div id="FCyT"></div>
-      <h1>SISTEMA DE APOYO A LA</h1><br>
-      <h1>EMPRESA "TIS"</h1><br>
-      <h1>BIENVENIDO</h1><br>
+    <h1>Bienvenido a la pagina principal</h1>
   </body>
 </html>
 
 @endsection
-
