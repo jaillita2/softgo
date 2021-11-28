@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="/js/bootstrap/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <!--favicon-->
     <!--styles-->
 </head>
@@ -21,6 +20,7 @@
             <span class="menu-icon">Menu</span>
             <nav class="navigation">
                 <ul>
+                    <li><a href="{{ url('/') }}"> Pagina Principal</a></li>
                     <li><a href="{{ url('users') }}"> Registro usuario</a></li>
                     <li><a href="{{ url('convocatoria') }}"> Convocatoria</a></li>
                     <li><a href="{{ url('especificaciones') }}"> Especificaciones</a></li>
@@ -28,8 +28,6 @@
                     <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
                     <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
                     <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
-                    <li><a href="{{ url('Listar') }}"> listar Documentos</a></li>
-                    <li><a href="{{ url('Listarr') }}"> listar Especificaciones</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,6 +38,7 @@
 
     <footer class="footer">
         <link rel="stylesheet" href="/css/style.css" class="rel">
+        <div id="logo2"></div>
             <div class="contaniers">
                 <p>Contactanos</p>
                 <p>Email: softgo2021@gmail.com</p>
