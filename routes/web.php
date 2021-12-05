@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\EspecificacionesController;
 use App\Http\Controllers\SpecsController;
 use App\Http\Controllers\UserCreateController;
@@ -59,3 +60,5 @@ Route::post('Listar', [L_convocatoriascontroller::class, 'store'])->name('L_conv
 Route::get('Listarr', [L_especificacionesController::class, 'index']);
 Route::post('Listarr', [L_especificacionesController::class, 'store'])->name('L_especificaiones.store');
 
+Route::get('Plani', [CalendarioController::class, 'index']);
+Route::post('Plani', [CalendarioController::class, 'store'])->name('Plani.store');

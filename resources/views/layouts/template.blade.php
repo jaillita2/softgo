@@ -30,6 +30,7 @@
                     <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
                     <li><a href="{{ url('Listar') }}"> listar Documentos</a></li>
                     <li><a href="{{ url('Listarr') }}"> listar Especificaciones</a></li>
+                    <li><a href="{{ url('Plani') }}"> Planificacion</a></li>
                 </ul>
             </nav>
         </div>
