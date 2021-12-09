@@ -1,14 +1,14 @@
 @extends('layouts.template')
 
-@section('title', 'Planificacion')
+@section('title', 'Calendario')
 
 @section('content')
 <link rel="stylesheet" href="/css/especificaciones.css" class="rel">
 <div class="container">
-<form action="{{route('Pagos.store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('Plani.store')}}" method="post" enctype="multipart/form-data">
 @csrf
 
-<h1>Registrar Plan de pagos</h1>
+<h1>Registrar Calendario</h1>
 
         <div class="form-group">
         <label for="NOMBRE_GRUPO">Nombre de Grupo empresa: </label><br>
@@ -28,7 +28,7 @@
 
         <div class="Adjuntar ">
         <label for="DOC_CAL">Adjuntar Archivo:</label><br>
-            <input type="file"class="Adjuntar" id="archivoCAL" name="DOC_CAL">
+            <input type="file"class="Adjuntar" id="archivoCAL" name="DOC_CAL" value="{{ old('DOC_CAL')}}">
             @error('DOC_CAL')
                 <br>
                     <small>*{{$message}}</small>

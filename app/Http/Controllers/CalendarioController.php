@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\StorePlani;
 use App\Models\calendario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CalendarioController extends Controller
 {
@@ -33,9 +34,16 @@ class CalendarioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePlani $request)
     {
-        //
+        $datosPlan = request()->except('_token');
+        if($request->hasfile('DOC_CAL')){
+            $datosPlan['DOC_CAL']=$request->file('DOC_CAL')->store('uploads','public');
+        }
+        calendario::insert($datosPlan);
+        session()-> flash('exito', 'El documento plan-calendario se registo de forma correcta');
+        return redirect('/');
+        
     }
 
     /**

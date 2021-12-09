@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StorePlan extends FormRequest
+class StorePlani extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,14 @@ class StorePlan extends FormRequest
     public function rules()
     {
         return [
-            'TITULO_PLAN'=> 'required|max:30',
-            'DOC_PLAN'=> 'required|mimes:pdf'
+            'NOMBRE_GRUPO'=> 'required|max:32|exists:grupo_empresas,NAME_EMP',
+            'DOC_CAL'=> 'required|mimes:pdf'
+        ];
+    }
+    public function messages()
+    {
+        return [
+            'NOMBRE_GRUPO.exists'=> 'El grupo-empresa no esta registrado'
         ];
     }
 }

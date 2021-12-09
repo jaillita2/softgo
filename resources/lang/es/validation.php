@@ -158,6 +158,8 @@ return [
         'SEMESTRE_P'=> 'semestre de propuesta',
         'DOC_P'=> 'archivo de propuesta',
         'SOCIOS'=> 'nombre de socios',
-        'ENC_GR'=> 'nombre de encargado'
+        'ENC_GR'=> 'nombre de encargado',
+        'NOMBRE_GRUPO'=>'nombre del grupo',
+        'DOC_CAL'=>'documento calendario'
     ],
 ];
