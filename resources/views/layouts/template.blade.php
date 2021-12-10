@@ -21,6 +21,7 @@
             <span class="menu-icon">Menu</span>
             <nav class="navigation">
                 <ul>
+                    <li><a href="{{ url('/') }}"> Pagina Principal</a></li>
                     <li><a href="{{ url('users') }}"> Registro usuario</a></li>
                     <li><a href="{{ url('convocatoria') }}"> Convocatoria</a></li>
                     <li><a href="{{ url('especificaciones') }}"> Pliego de especificaciones</a></li>
@@ -28,8 +29,8 @@
                     <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
                     <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
                     <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
-                    <li><a href="{{ url('Listar') }}"> listar Documentos</a></li>
-                    <li><a href="{{ url('Listarr') }}"> listar Especificaciones</a></li>
+                    <li><a href="{{ url('Listar') }}"> Listar Documentos</a></li>
+                    <li><a href="{{ url('Listarr') }}"> Listar Especificaciones</a></li>
                     <li><a href="{{ url('Plani') }}"> Calendario</a></li>
                 </ul>
             </nav>
@@ -41,6 +42,7 @@
 
     <footer class="footer">
         <link rel="stylesheet" href="/css/style.css" class="rel">
+        <div id="logo2"></div>
             <div class="contaniers">
                 <p>Contactanos</p>
                 <p>Email: softgo2021@gmail.com</p>
