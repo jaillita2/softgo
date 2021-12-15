@@ -29,7 +29,7 @@ class StoreGrupo extends FormRequest
             'DIRECCION'=> 'required|max:30',
             'TELEFONO'=> 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:18',
             'SOCIOS'=> 'required|max:400',
-            'ENC_GR'=> 'required|max:35|unique:grupo_empresas'
+            'ENC_GR'=> 'required|max:35|unique:grupo_empresas|exists:user__creates,NAME'
         ];
     }
 }

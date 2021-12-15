@@ -26,7 +26,7 @@ class StorePropuesta extends FormRequest
         return [
             'NAME_P'=> 'required|max:30',
             'SEMESTRE_P'=> 'required',
-            'DOC_P'=> 'required'
+            'DOC_P'=> 'required|mimes:pdf,zip'
         ];
     }
 }

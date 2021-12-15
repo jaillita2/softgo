@@ -60,10 +60,11 @@
                 <br>
             @enderror
             <br>
+            <label for="ENC_GR"></label>
         </div>
         <div class="form-group ">
             <label for="SOCIOS">Socios:</label><br>
-            <textarea class="form-control" id="socios" name="SOCIOS" placeholder="Armando Carpa Porsillueve" rows="8"></textarea>
+            <textarea class="form-control" id="socios" name="SOCIOS" placeholder="Juan Pablo Ibañez Soto" rows="8"></textarea>
             @error('SOCIOS')
                 <br>
                     <small>*{{$message}}</small>

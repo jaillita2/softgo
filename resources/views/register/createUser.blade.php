@@ -58,17 +58,6 @@
             </div>
 
             <div class="form-group">
-            <label for="LAST_NAME"> Apellido(s): </label><br>
-            <input class="controls" type="text" name="LAST_NAME" id="last_name" placeholder="Perez Maldonado" value="{{old('LAST_NAME')}}">
-            @error('LAST_NAME')
-                <br>
-                    <small>*{{$message}}</small>
-                <br>
-            @enderror
-            <br>
-            </div>
-
-            <div class="form-group">
             <label for="NAME"> Nombre: </label><br>
             <input class="controls" type="text" name="NAME" id="name" placeholder="Juan Pablo" value="{{ old('NAME')}}">
             @error('NAME')

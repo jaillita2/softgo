@@ -27,8 +27,7 @@ class StoreUser extends FormRequest
                 'NAME_USER'=> 'required|max:30|min:4|unique:user__creates|alpha_dash',
                 'ID_USER'=> 'required|unique:user__creates|numeric|digits_between:9, 9',
                 'EMAIL'=>'required|max:30|unique:user__creates|email',
-                'LAST_NAME'=>'required|max:60|regex:/^[\pL\s\-]+$/u',
-                'NAME'=>'required|max:30|regex:/^[\pL\s\-]+$/u',
+                'NAME'=>'required|max:50|regex:/^[\pL\s\-]+$/u|unique:user__creates',
                 'PASSWD_USER'=>'required|min:8|max:30'
         ];
     }
@@ -36,7 +35,8 @@ class StoreUser extends FormRequest
     public function messages()
     {
         return [
-            'ID_USER.digits_between'=> 'El codigo sis tiene debe tener 9 caracteres numericos'
+            'ID_USER.digits_between'=> 'El codigo sis tiene debe tener 9 caracteres numericos',
+            'NAME.unique'=> 'La persona ya se ha registrada'
         ];
     }
 }

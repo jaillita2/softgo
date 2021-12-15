@@ -24,7 +24,7 @@ class StoreMaterial extends FormRequest
     public function rules()
     {
         return [
-            'TITULO_APO'=> 'required|max:30'
+            'TITULO_APO'=> 'required|max:30|mimes:pdf'
         ];
     }
 }

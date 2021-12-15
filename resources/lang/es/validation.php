@@ -135,7 +135,7 @@ return [
     ],
     'attributes' => [
         'NAME'=> 'nombre',
-        'LAST_NAME'=> 'apellido',
+
         'EMAIL'=> 'correo electronico',
         'PASSWD_USER'=> 'contraseña',
         'ID_USER'=> 'codigo sis',
