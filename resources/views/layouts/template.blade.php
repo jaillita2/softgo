@@ -32,6 +32,7 @@
                     <li><a href="{{ url('Listar') }}"> Listar Documentos</a></li>
                     <li><a href="{{ url('Listarr') }}"> Listar Especificaciones</a></li>
                     <li><a href="{{ url('Plani') }}"> Calendario</a></li>
+                    <li><a href="{{ url('Cursos') }}"> Registrarse con un consultor</a></li>
                 </ul>
             </nav>
         </div>

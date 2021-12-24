@@ -6,6 +6,7 @@ use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\EspecificacionesController;
 use App\Http\Controllers\SpecsController;
 use App\Http\Controllers\UserCreateController;
+use App\Http\Controllers\CursoController;
 use App\Http\Controllers\DocumentacionPropuestaController;
 use App\Http\Controllers\GrupoEmpresaController;
 use App\Http\Controllers\SesionController;
@@ -62,3 +63,6 @@ Route::post('Listarr', [L_especificacionesController::class, 'store'])->name('L_
 
 Route::get('Plani', [CalendarioController::class, 'index']);
 Route::post('Plani', [CalendarioController::class, 'store'])->name('Plani.store');
+
+Route::get('Cursos', [CursoController::class, 'index']);
+Route::post('Cursos', [CursoController::class, 'store'])->name('Cursos.store');

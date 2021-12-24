@@ -160,6 +160,7 @@ return [
         'SOCIOS'=> 'nombre de socios',
         'ENC_GR'=> 'nombre de encargado',
         'NOMBRE_GRUPO'=>'nombre del grupo',
-        'DOC_CAL'=>'documento calendario'
+        'DOC_CAL'=>'documento calendario',
+        'COD_CURSO'=> 'codigo de consultor'
     ],
 ];
