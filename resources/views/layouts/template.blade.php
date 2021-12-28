@@ -32,6 +32,8 @@
                     <li><a href="{{ url('Plani') }}"> Calendario</a></li>
                     <li><a href="{{ url('Cursos') }}"> Registrarse con un consultor</a></li>
                     <li><a href="{{ url('Lista') }}"> listar Grupo-Empresa</a></li>
+                    <li><a href="{{ url('contratos') }}"> Emitir Contrato</a></li>
+                    <li><a href="{{ url('reportes') }}"> Reporte de Propuestas</a></li>
                 </ul>
             </nav>
         </div>

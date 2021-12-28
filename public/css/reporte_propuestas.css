@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    font-size: 15px ;
+    background: #A1ADAD;
+    padding: 30px 60px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    color: rgb(0, 0, 0);
+}
+
+.form-control, select{
+    border-radius: solido 1px #ccc ;
+    padding: 4px;
+    width: 475px;
+    border-radius: 5px;
+
+}
+input[type="file"] {
+    display: none;
+}
+
+.Adjuntar .Adjuntar{
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+
+}
+.file-select {
+  position: relative;
+  display: inline-block;
+}
+.container h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container button{
+    color:aliceblue;
+    padding: 5px;
+    margin: center;
+    margin-top: 10px;
+    background-color:rgb(10, 10, 10);
+    width: 20%;
+    border-radius: 5px;
+}

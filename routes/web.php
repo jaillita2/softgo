@@ -14,6 +14,8 @@ use App\Http\Controllers\PlanPagosController;
 use App\Http\Controllers\L_grupocontroller;
 use App\Http\Controllers\L_convocatoriascontroller;
 use App\Http\Controllers\L_especificacionesController;
+use App\Http\Controllers\ContratosController;
+use App\Http\Controllers\ReportesController;
 use App\Models\especificaciones;
 use App\Http\Controllers\MaterialApoyoController;
 use Illuminate\Support\Facades\Artisan;
@@ -69,3 +71,10 @@ Route::get('Cursos', [CursoController::class, 'index']);
 Route::post('Cursos', [CursoController::class, 'store'])->name('Cursos.store');
 Route::get('Lista', [L_grupocontroller::class, 'index']);
 Route::post('Lista', [L_grupocontroller::class, 'store'])->name('L_grupo.store');
+Route::get('contratos', [ContratosController::class, 'index']);
+Route::post('contratos', [ContratosController::class, 'store'])->name('contratos.store');
+
+Route::get('reportes', [ReportesController::class, 'index']);
+Route::post('reportes', [ReportesController::class, 'store'])->name('reportes.store');
+
+
