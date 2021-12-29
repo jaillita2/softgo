@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/data-tables-1.11.3/dataTables.bootstrap4.min.css"/>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="/js/bootstrap/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--favicon-->
     <!--styles-->
 </head>
@@ -34,6 +35,8 @@
                     <li><a href="{{ url('Plani') }}"> Calendario</a></li>
                     <li><a href="{{ url('Cursos') }}"> Registrarse con un consultor</a></li>
                     <li><a href="{{ url('Lista') }}"> listar Grupo-Empresa</a></li>
+                    <li><a href="{{ url('contratos') }}"> Emitir Contrato</a></li>
+                    <li><a href="{{ url('reportes') }}"> Reporte de Propuestas</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,8 +58,10 @@
 
     </footer>
     <!--script-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/scripts.js"></script>
-
+    <script src="js/constants.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/data-tables-1.11.3/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="js/data-tables-1.11.3/dataTables.bootstrap4.min.js"></script>
 </body>
 </html>

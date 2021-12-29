@@ -33,10 +33,11 @@
     text-align:center;
     line-height: 2;
     font-size: 12px;
+    position: relative;
     width: 100%;
     bottom: 0;
+    width: 100%;
     margin-top: auto;
-    position: relative;
  }
 
  .footer .contaniers {
@@ -100,6 +101,14 @@
     background: blue;
 }
 
+body{
+    margin: 0;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 @media only screen and (max-width: 800px) {
     #logo{
         left: 3.2%;
@@ -122,7 +131,7 @@
         float: right;
         position: relative;
         background-size: 100% 100%;
-    }   
+    }
 
     .header h1 {
         font-size: 35px;
@@ -134,7 +143,6 @@
         display: block;
         cursor: pointer;
     }
-
 
     .navigation{
         width: 100%;
@@ -164,4 +172,8 @@
    .navigation ul li a:hover {
        background: blue;
    }
+}
+
+.custom-select.custom-select-sm {
+    width: 45px !important;
 }
