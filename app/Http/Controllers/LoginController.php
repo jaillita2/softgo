@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\curso;
+use App\Models\login;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreCurso;
+use App\Http\Requests\StoreLogin;
 
-class CursoController extends Controller
+class LoginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-        return view('curso.curso');
+        return view('login.login');
     }
 
     /**
@@ -34,21 +34,30 @@ class CursoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCurso $request)
-    {
-        $datosG = request()->except('_token');
-        curso::insert($datosG);
-        session()-> flash('exito', 'Registrado');
-        return redirect('Listar');
+    public function store(StoreLogin $request)
+    { 
+        $name = $request->input('EMAIL');
+        if($name =='docente@gmail.com')
+         {
+            return redirect('convocatoria');
+         }
+         else{
+            $datosUsers = request()->except('_token') ;
+            return redirect('Listar');
+         }
+         
+       
+       
     }
 
+    
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\curso  $curso
+     * @param  \App\Models\login  $login
      * @return \Illuminate\Http\Response
      */
-    public function show(curso $curso)
+    public function show(login $login)
     {
         //
     }
@@ -56,10 +65,10 @@ class CursoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\curso  $curso
+     * @param  \App\Models\login  $login
      * @return \Illuminate\Http\Response
      */
-    public function edit(curso $curso)
+    public function edit(login $login)
     {
         //
     }
@@ -68,10 +77,10 @@ class CursoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\curso  $curso
+     * @param  \App\Models\login  $login
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, curso $curso)
+    public function update(Request $request, login $login)
     {
         //
     }
@@ -79,10 +88,10 @@ class CursoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\curso  $curso
+     * @param  \App\Models\login  $login
      * @return \Illuminate\Http\Response
      */
-    public function destroy(curso $curso)
+    public function destroy(login $login)
     {
         //
     }

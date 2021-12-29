@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\EspecificacionesController;
@@ -31,7 +32,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'index']);
 
-/*Route::get('user', [UserCreateController::class, 'create']);*/
+Route::get('Login', [LoginController::class, 'index']);
+Route::post('Login', [LoginController::class, 'store'])->name('Login.store');
+
+Route::put('Login', [LoginController::class, 'logout']);
+
+Route::get('Cursos', [CursoController::class, 'index']);
+Route::post('Cursos', [CursoController::class, 'store'])->name('Cursos.store');
 
 Route::get('convocatoria', [AnnouncementController::class, 'create']);
 Route::post('convocatoria', [AnnouncementController::class, 'store'])->name('convocatoria.store');
@@ -64,5 +71,3 @@ Route::post('Listarr', [L_especificacionesController::class, 'store'])->name('L_
 Route::get('Plani', [CalendarioController::class, 'index']);
 Route::post('Plani', [CalendarioController::class, 'store'])->name('Plani.store');
 
-Route::get('Cursos', [CursoController::class, 'index']);
-Route::post('Cursos', [CursoController::class, 'store'])->name('Cursos.store');
