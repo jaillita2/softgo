@@ -173,3 +173,7 @@ body{
        background: blue;
    }
 }
+
+.custom-select.custom-select-sm {
+    width: 45px !important;
+}

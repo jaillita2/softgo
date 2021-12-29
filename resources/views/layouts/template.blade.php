@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/data-tables-1.11.3/dataTables.bootstrap4.min.css"/>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <title>@yield('title')</title>
     <!--favicon-->
     <!--styles-->
@@ -55,8 +58,10 @@
 
     </footer>
     <!--script-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/scripts.js"></script>
-
+    <script src="js/constants.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/data-tables-1.11.3/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="js/data-tables-1.11.3/dataTables.bootstrap4.min.js"></script>
 </body>
 </html>

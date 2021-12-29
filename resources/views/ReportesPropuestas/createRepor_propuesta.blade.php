@@ -4,15 +4,28 @@
 
 @section('content')
 <link rel="stylesheet" href="/css/reporte_propuestas.css" class="rel">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-<div class="container">
+
+<div class="container data-table-wrapper">
     <form action="/" method="get" enctype="multipart/form-data">
         <h1>Reporte de Propuestas</h1>
         <body>
-            <table class="table">
-                    <th>Grupo Empresa</th>
-                    <th>Documento</th>
-                    <th>Responder</th>
+            <table id="reports-table" class="table" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Grupo Empresa</th>
+                        <th>Documento</th>
+                        <th>Responder</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach ($empresas as $empresa)
+                    <tr>
+                        <td> {{ $empresa->NAME_EMP }} </td>
+                        <td> {{ $empresa->ENC_GR }} </td>
+                        <td> <a href="#"> Responder </a> </td>
+                    </tr>
+                @endforeach
+                </tbody>
             </table>
         </body>
 
@@ -23,3 +36,14 @@
     </form>
 
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('#reports-table').DataTable({
+            "language": DATA_TABLE_SPANISH_PARAMETERS,
+            "info": false
+        });
+    });
+</script>
+
+@endsection

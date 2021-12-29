@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\reportes;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 
 
 class ReportesController extends Controller
@@ -16,9 +16,8 @@ class ReportesController extends Controller
      */
     public function index()
     {
-        return view('ReportesPropuestas.createRepor_propuesta');
-
-
+        $query = DB::table('grupo_empresas')->get();
+        return view('ReportesPropuestas.createRepor_propuesta', ['empresas'=>$query]);
     }
 
     /**
