@@ -13,7 +13,6 @@
                 <thead>
                     <tr>
                         <th>Grupo Empresa</th>
-                        <th>Documento</th>
                         <th>Responder</th>
                     </tr>
                 </thead>
@@ -21,20 +20,18 @@
                 @foreach ($empresas as $empresa)
                     <tr>
                         <td> {{ $empresa->NAME_EMP }} </td>
-                        <td> {{ $empresa->ENC_GR }} </td>
-                        <td> <a href="#"> Responder </a> </td>
+                        <td> <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={{ $empresa->EMAIL_DOCE }}" target="_blank">
+                            Responder </a>
+                        </td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
         </body>
-
         <div class="form-group ">
             <button class="btn btn-warnig" id="btnCancelar">Salir</button>
         </div>
-
     </form>
-
 </div>
 
 <script>
