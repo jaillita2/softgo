@@ -11,6 +11,7 @@ use App\Http\Controllers\DocumentacionPropuestaController;
 use App\Http\Controllers\GrupoEmpresaController;
 use App\Http\Controllers\SesionController;
 use App\Http\Controllers\PlanPagosController;
+use App\Http\Controllers\L_grupocontroller;
 use App\Http\Controllers\L_convocatoriascontroller;
 use App\Http\Controllers\L_especificacionesController;
 use App\Models\especificaciones;
@@ -66,3 +67,5 @@ Route::post('Plani', [CalendarioController::class, 'store'])->name('Plani.store'
 
 Route::get('Cursos', [CursoController::class, 'index']);
 Route::post('Cursos', [CursoController::class, 'store'])->name('Cursos.store');
+Route::get('Lista', [L_grupocontroller::class, 'index']);
+Route::post('Lista', [L_grupocontroller::class, 'store'])->name('L_grupo.store');
