@@ -51,7 +51,6 @@
   <button class="dropbtn">≡</button>
   <div class="dropdown-content">
       
-                    
                     <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
                     <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
                     <li><a href="{{ url('Listar') }}"> Listar Documentos</a></li>
