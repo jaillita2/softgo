@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CalendarioController;
 use App\Http\Controllers\EspecificacionesController;
 use App\Http\Controllers\SpecsController;
@@ -35,6 +36,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controller::class, 'index']);
 
 /*Route::get('user', [UserCreateController::class, 'create']);*/
+Route::get('Login', [LoginController::class, 'index']);
+Route::post('Login', [LoginController::class, 'store'])->name('Login.store');
 
 Route::get('convocatoria', [AnnouncementController::class, 'create']);
 Route::post('convocatoria', [AnnouncementController::class, 'store'])->name('convocatoria.store');

@@ -22,21 +22,9 @@
             <span class="menu-icon">Menu</span>
             <nav class="navigation">
                 <ul>
-                    <li><a href="{{ url('/') }}"> Pagina Principal</a></li>
+                <li><a href="{{ url('/') }}"> Pagina Principal</a></li>
+                    <li><a href="{{ url('Login') }}"> Iniciar Sesion</a></li>
                     <li><a href="{{ url('users') }}"> Registro usuario</a></li>
-                    <li><a href="{{ url('convocatoria') }}"> Convocatoria</a></li>
-                    <li><a href="{{ url('especificaciones') }}"> Pliego de especificaciones</a></li>
-                    <li><a href="{{ url('MaterialApoyo') }}"> Material de Apoyo</a></li>
-                    <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
-                    <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
-                    <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
-                    <li><a href="{{ url('Listar') }}"> Listar Documentos</a></li>
-                    <li><a href="{{ url('Listarr') }}"> Listar Especificaciones</a></li>
-                    <li><a href="{{ url('Plani') }}"> Calendario</a></li>
-                    <li><a href="{{ url('Cursos') }}"> Registrarse con un consultor</a></li>
-                    <li><a href="{{ url('Lista') }}"> listar Grupo-Empresa</a></li>
-                    <li><a href="{{ url('contratos') }}"> Emitir Contrato</a></li>
-                    <li><a href="{{ url('reportes') }}"> Reporte de Propuestas</a></li>
                 </ul>
             </nav>
         </div>
