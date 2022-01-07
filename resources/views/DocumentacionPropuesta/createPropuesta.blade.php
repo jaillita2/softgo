@@ -70,8 +70,8 @@
         <h1>Registrar documentacion propuesta</h1>
 
         <div class="form-group">
-            <label for="NAME_P">Nombre:</label><br>
-            <input type="text" class="form-control" id="titulo_esp" name="NAME_P" placeholder="Ingrese el Titulo" value="{{old('NAME_P')}}">
+            <label for="NAME_P">Nombre de Grupo-Empresa:</label><br>
+            <input type="text" class="form-control" id="titulo_esp" name="NAME_P" placeholder="Ingrese el nombre de su grupo-empresa" value="{{old('NAME_P')}}">
             @error('NAME_P')
                 <br>
                     <small>*{{$message}}</small>

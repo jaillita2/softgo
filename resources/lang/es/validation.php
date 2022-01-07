@@ -154,7 +154,7 @@ return [
         'EMAIL_DOCE'=> 'correo electronico de grupo-empresa',
         'DIRECCION'=> 'direccion',
         'TELEFONO'=> 'telefono',
-        'NAME_P'=> 'nombre de propuesta',
+        'NAME_P'=> 'nombre de grupo-empresa',
         'SEMESTRE_P'=> 'semestre de propuesta',
         'DOC_P'=> 'archivo de propuesta',
         'SOCIOS'=> 'nombre de socios',

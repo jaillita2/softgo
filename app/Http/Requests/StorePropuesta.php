@@ -24,7 +24,7 @@ class StorePropuesta extends FormRequest
     public function rules()
     {
         return [
-            'NAME_P'=> 'required|max:30',
+            'NAME_P'=> 'required|max:30|exists:grupo_empresas,NAME_EMP',
             'SEMESTRE_P'=> 'required',
             'DOC_P'=> 'required|mimes:pdf,zip'
         ];

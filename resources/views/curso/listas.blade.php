@@ -1,9 +1,13 @@
+<?php
+
+?>
 @extends('layouts.template')
 
-@section('title', 'Reporte')
+@section('title', 'Inscritos')
 
 @section('content')
-<link rel="stylesheet" href="/css/reporte_propuestas.css" class="rel">
+<link rel="stylesheet" href="/css/L_convocatorias.css" class="rel">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style ="min-height:10000px">
@@ -50,52 +54,50 @@
 <div class="dropdown">
   <button class="dropbtn">≡</button>
   <div class="dropdown-content">
-            <li><a href="{{ url('especificaciones') }}"> Especificaciones</a></li>
-            <li><a href="{{ url('MaterialApoyo') }}"> Material de Apoyo</a></li>
-            <li><a href="{{ url('contratos') }}"> Emitir Contrato</a></li>
-             <li><a href="{{ url('convocatoria') }}"> Convocatoria</a></li>
+      
+                    <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
+                    <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
+                    <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
+                    <li><a href="{{ url('Listar') }}"> Listar Convocatorias</a></li>
+                    <li><a href="{{ url('Listarr') }}"> Listar Especificaciones</a></li>
+                    <li><a href="{{ url('Cursos') }}"> Registrarse con un consultor</a></li>
+                    <li><a href="{{ url('Plani') }}"> Calendario</a></li>
+                
   </div>
 </div>
 
 </body>
-
-<div class="container data-table-wrapper">
+<div class="container">
     <form action="/" method="get" enctype="multipart/form-data">
-        <h1>Reporte de Propuestas</h1>
+        @csrf
+        <h1>Lista de estudiantes inscritos</h1>
         <body>
-            <table id="reports-table" class="table" style="width: 100%;">
-                <thead>
-                    <tr>
-                        <th>Grupo Empresa</th>
-                        <th>Archivo</th>
-                        <th>Responder</th>
-                    </tr>
+            <table class="table">
+                <thead class="thead-dark">
+                    <th scope="col">Codigo de Curso</th>
+                    <th scope="col">Codigo de estudiante</th>
+                    <th scope="col">Nombre del estudiante</th>
+
                 </thead>
                 <tbody>
-                @foreach ($empresas as $empresa)
+                    @foreach ($listado as $l )
                     <tr>
-                        <td> {{ $empresa->NAME_EMP }} </td>
-                        <td> <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={{ $empresa->EMAIL_DOCE }}" target="_blank">
-                            Responder </a>
-                        </td>
+                        <td>{{$l->COD_CURSO}}</td>
+                        <td>{{$l->ID_USER}}</td>
+
                     </tr>
-                @endforeach
+                    @endforeach
+
                 </tbody>
-            </table> 
+            </table>
         </body>
+
         <div class="form-group ">
             <button class="btn btn-warnig" id="btnCancelar">Salir</button>
         </div>
-    </form>
-</div>
 
-<script>
-    $(document).ready(function() {
-        $('#reports-table').DataTable({
-            "language": DATA_TABLE_SPANISH_PARAMETERS,
-            "info": false
-        });
-    });
-</script>
+    </form>
+
+</div>
 
 @endsection

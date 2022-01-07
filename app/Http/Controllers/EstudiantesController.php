@@ -2,17 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use app\Models\L_grupo;
-
+use App\Models\estudiantes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
-
 use App\Http\Requests\StoreL_Especificacion;
 
-
-
-class L_grupocontroller extends Controller
+class EstudiantesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,11 +16,9 @@ class L_grupocontroller extends Controller
      */
     public function index()
     {
-        $query= DB::table('grupo_empresas')
+        $query= DB::table('cursos')
         ->get();
-        return view('L_grupo.createL_grupo',['listado'=>$query]);
-
-
+        return view('curso.listas',['listado'=>$query]);
     }
 
     /**
@@ -35,8 +28,7 @@ class L_grupocontroller extends Controller
      */
     public function create()
     {
-        return view('L_grupo.createL_grupo');
-
+        return view('curso.listas');
     }
 
     /**
@@ -47,16 +39,16 @@ class L_grupocontroller extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\L_grupo  $L_grupo
+     * @param  \App\Models\estudiantes  $estudiantes
      * @return \Illuminate\Http\Response
      */
-    public function show(L_grupo $L_grupo)
+    public function show(estudiantes $estudiantes)
     {
         //
     }
@@ -64,10 +56,10 @@ class L_grupocontroller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\L_grupo  $L_grupo
+     * @param  \App\Models\estudiantes  $estudiantes
      * @return \Illuminate\Http\Response
      */
-    public function edit(L_grupo $L_grupo)
+    public function edit(estudiantes $estudiantes)
     {
         //
     }
@@ -76,10 +68,10 @@ class L_grupocontroller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\L_grupo  $L_grupo
+     * @param  \App\Models\estudiantes  $estudiantes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, L_grupo $L_grupo)
+    public function update(Request $request, estudiantes $estudiantes)
     {
         //
     }
@@ -87,10 +79,10 @@ class L_grupocontroller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\L_grupo  $L_grupo
+     * @param  \App\Models\estudiantes  $estudiantes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(L_grupo $L_grupo)
+    public function destroy(estudiantes $estudiantes)
     {
         //
     }

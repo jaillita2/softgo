@@ -18,7 +18,7 @@ class ReportesController extends Controller
     {
         $query = DB::table('grupo_empresas')->get();
         return view('ReportesPropuestas.createRepor_propuesta', ['empresas'=>$query]);
-    }
+    } 
 
     /**
      * Show the form for creating a new resource.

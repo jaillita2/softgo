@@ -17,6 +17,7 @@ use App\Http\Controllers\L_convocatoriascontroller;
 use App\Http\Controllers\L_especificacionesController;
 use App\Http\Controllers\ContratosController;
 use App\Http\Controllers\ReportesController;
+use App\Http\Controllers\EstudiantesController;
 use App\Models\especificaciones;
 use App\Http\Controllers\MaterialApoyoController;
 use Illuminate\Support\Facades\Artisan;
@@ -80,4 +81,5 @@ Route::post('contratos', [ContratosController::class, 'store'])->name('contratos
 Route::get('reportes', [ReportesController::class, 'index']);
 Route::post('reportes', [ReportesController::class, 'store'])->name('reportes.store');
 
-
+Route::get('student', [EstudiantesController::class, 'index']);
+Route::post('student', [EstudiantesController::class, 'store'])->name('student.store');
