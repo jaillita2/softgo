@@ -58,7 +58,7 @@
             <br>
             </div>
             
-            <button type="submit">Crear usuario</button>
+          <button type="submit" style="background-color: rgb(3, 93, 134);">Crear usuario</button>
             <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
             
             <br>

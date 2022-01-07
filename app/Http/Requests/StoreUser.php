@@ -26,7 +26,7 @@ class StoreUser extends FormRequest
         return [
                 'ID_USER'=> 'required|unique:user__creates|numeric|digits_between:9, 9',
                 'EMAIL'=>'required|max:30|unique:user__creates|email',
-                'NAME'=>'required|max:50|regex:/^[\pL\s\-]+$/u|unique:user__creates',
+                'NAME'=>'required|min:15|max:50|regex:/^[\pL\s\-]+$/u|unique:user__creates',
                 'PASSWD_USER'=>'required|min:8|max:30'
         ];
     }

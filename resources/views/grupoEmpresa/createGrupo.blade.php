@@ -68,7 +68,7 @@
     <h1>Registro de Grupo-Empresa</h1>
         @csrf
         <div class="form-group">
-            <label for="NAME_EMP">Nombre de empresa:</label><br>
+            <label for="NAME_EMP">Nombre de Grupo-Empresa:</label><br>
             <input type="text" class="form-control" id="nombre_emp" name="NAME_EMP" placeholder="Ingrese el Nombre de la empresa" value="{{old('NAME_EMP')}}">
             @error('NAME_EMP')
                 <br>
@@ -79,7 +79,7 @@
         </div>
 
         <div class="form-group">
-            <label for="EMAIL_DOCE">Correo electronico:</label><br>
+            <label for="EMAIL_DOCE">Correo electronico de Grupo-Empresa:</label><br>
             <input type="email" class="form-control" id="emailDoce" name="EMAIL_DOCE" placeholder="Ingrese el Email" value="{{old('EMAIL_DOCE')}}">
             @error('EMAIL_DOCE')
                 <br>
@@ -90,7 +90,7 @@
         </div>
 
         <div class="form-group">
-            <label for="DIRECCION">Direccion:</label><br>
+            <label for="DIRECCION">Direccion de la Grupo-Empresa:</label><br>
             <input type="text" class="form-control" id="direccion" name="DIRECCION" placeholder="Ingrese la Direccion" value="{{old('DIRECCION')}}">
             @error('DIRECCION')
                 <br>
@@ -101,7 +101,7 @@
         </div>
 
         <div class="form-group">
-            <label for="TELEFONO">Telefono:</label><br>
+            <label for="TELEFONO">Telefono de la Grupo-Empresa:</label><br>
             <input type="text" class="form-control" id="telefono" name="TELEFONO" placeholder="+59171618999" value="{{old('TELEFONO')}}">
             @error('TELEFONO')
                 <br>
@@ -111,7 +111,7 @@
             <br>
         </div>  
         <div class="form-group">
-            <label for="ENC_GR">Representante:</label><br>
+            <label for="ENC_GR">Nombre Completo del Representante legal:</label><br>
             <input type="text" class="form-control" id="enc_gr" name="ENC_GR" placeholder="Encargado de grupo" value="{{old('ENC_GR')}}">
             @error('ENC_GR')
                 <br>
