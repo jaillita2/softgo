@@ -9,20 +9,10 @@
         <form class="form-register" method="post" action="{{ url('users') }}">
 
         <div id="register">
-            <h1>Nueva cuenta</h1>
+            <h1>Registrarse como estudiante</h1>
             <h4>Crear un nuevo usuario y contraseña para acceder al sistema</h4>
             @csrf
 
-            <div class="form-group">
-            <label for="NAME_USER"> Nombre de usuario: </label><br>
-            <input class="controls" type="text" name="NAME_USER" id="username" placeholder="Juan_Pablo" value="{{ old('NAME_USER')}}">
-            @error('NAME_USER')
-                <br>
-                    <small>*{{$message}}</small>
-                <br>
-            @enderror
-            <br>
-            </div>
             
             <div class="form-group">
             <label for="ID_USER"> Código Sis: </label><br>

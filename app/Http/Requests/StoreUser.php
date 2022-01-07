@@ -24,7 +24,6 @@ class StoreUser extends FormRequest
     public function rules()
     {
         return [
-                'NAME_USER'=> 'required|max:30|min:4|unique:user__creates|alpha_dash',
                 'ID_USER'=> 'required|unique:user__creates|numeric|digits_between:9, 9',
                 'EMAIL'=>'required|max:30|unique:user__creates|email',
                 'NAME'=>'required|max:50|regex:/^[\pL\s\-]+$/u|unique:user__creates',
