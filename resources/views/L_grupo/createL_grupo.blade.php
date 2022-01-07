@@ -75,13 +75,18 @@
             <table class="table">
                 <thead class="thead-dark">
                     <th scope="col">nombre</th>
+                    <th scope="col">Correo electronico</th>
+                    <th scope="col">Representante legal</th>
+                    <th scope="col">Socios</th>
 
                 </thead>
                 <tbody>
                     @foreach ($listado as $l )
                     <tr>
                         <td>{{$l->NAME_EMP}}</td>
-
+                        <td>{{$l->EMAIL_DOCE}}</td>
+                        <td>{{$l->ENC_GR}}</td>
+                        <td>{{$l->SOCIOS}}</td>
 
                     </tr>
                     @endforeach

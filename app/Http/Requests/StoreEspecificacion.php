@@ -25,7 +25,7 @@ class StoreEspecificacion extends FormRequest
     {
         return [
             'TITULO_ESP'=> 'required|max:30',
-            'FECHA_ESP'=> 'required',
+            'FECHA_ESP'=> 'required|after:start_date',
             'SEMESTRE_ESP'=> 'required',
             'DOC_ESP'=> 'required|mimes:pdf'
         ];

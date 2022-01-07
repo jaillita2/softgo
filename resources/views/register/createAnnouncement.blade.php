@@ -76,7 +76,7 @@
 
         <div class="form-group">
             <label for="FECHA_CONV">Seleccionar Fecha:</label><br>
-            <input class="form-control" type="date" id="fecha_conv" name="FECHA_CONV" placeholder="Select date" value="{{ old('FECHA_CONV')}}">
+            <input class="form-control" type="date" id="fecha_conv" name="FECHA_CONV" placeholder="Select date" min="2015-01-01" max="2022-01-31" value="{{ old('FECHA_CONV')}}">
             @error('FECHA_CONV')
                 <br>
                     <small>*{{$message}}</small>
