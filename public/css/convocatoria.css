@@ -38,11 +38,13 @@ input[type="file"] {
 .file-select {
   position: relative;
   display: inline-block;
+  color:black;
 }
 .container h1 {
     font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
+    color: black;
 }
 
 .container button{

@@ -23,7 +23,6 @@
     <div id="FCyT"></div>
     <h1>SISTEMA DE APOYO A LA</h1><br>
     <h1>EMPRESA "TIS"</h1><br>
-    <h1>BIENVENIDO</h1><br>
   </body>
 </html>
 

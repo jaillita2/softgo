@@ -18,13 +18,13 @@
         <link rel="stylesheet" href="/css/style.css" class="rel">
         <div class="contanier logo-nav-contanier">
             <div id="logo"></div>
-            <h1>UNIVERSIDAD MAYOR DE SAN SIMON</h1>
+            <h1>FACULTAD DE CIENCIAS Y TECNOLOGIA</h1>
             <span class="menu-icon">Menu</span>
             <nav class="navigation">
                 <ul>
                 <li><a href="{{ url('/') }}"> Pagina Principal</a></li>
-                    <li><a href="{{ url('Login') }}"> Iniciar Sesion</a></li>
-                    <li><a href="{{ url('users') }}"> Registro usuario</a></li>
+                <li><a href="{{ url('users') }}"> Registro usuario</a></li>
+                <li><a href="{{ url('Login') }}"> Iniciar Sesion</a></li>
                 </ul>
             </nav>
         </div>

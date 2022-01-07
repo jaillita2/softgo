@@ -15,7 +15,7 @@
 
             <div class="form-group">
             <label for="NAME_USER"> Nombre de usuario: </label><br>
-            <input class="controls" type="text" name="NAME_USER" id="username" placeholder="Juan_Perez" value="{{ old('NAME_USER')}}">
+            <input class="controls" type="text" name="NAME_USER" id="username" placeholder="Juan_Pablo" value="{{ old('NAME_USER')}}">
             @error('NAME_USER')
                 <br>
                     <small>*{{$message}}</small>
@@ -58,8 +58,8 @@
             </div>
 
             <div class="form-group">
-            <label for="NAME"> Nombre: </label><br>
-            <input class="controls" type="text" name="NAME" id="name" placeholder="Juan Pablo" value="{{ old('NAME')}}">
+            <label for="NAME"> Nombre completo: </label><br>
+            <input class="controls" type="text" name="NAME" id="name" placeholder="Juan Pablo Ibañez Soto" value="{{ old('NAME')}}">
             @error('NAME')
                 <br>
                     <small>*{{$message}}</small>

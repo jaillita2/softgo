@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
+    color:black;
 }
 
 .form-register button{
@@ -33,12 +34,14 @@
     font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
+    color:black;
 }
 
 .form-register h4 {
     font-size: 15px;
     margin-bottom: 30px;
     text-align: center;
+    color:black;
 }
 
 .controls{
