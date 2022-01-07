@@ -74,7 +74,7 @@
         <body>
             <table class="table">
                 <thead class="thead-dark">
-                    <th scope="col">Codigo de Curso</th>
+                    <th scope="col">Codigo de Docente</th>
                     <th scope="col">Codigo de estudiante</th>
                     <th scope="col">Nombre del estudiante</th>
 
@@ -84,7 +84,7 @@
                     <tr>
                         <td>{{$l->COD_CURSO}}</td>
                         <td>{{$l->ID_USER}}</td>
-
+                        <td>{{$l->ESTUDIANTE}}</td>
                     </tr>
                     @endforeach
 

@@ -25,7 +25,15 @@ class StoreCurso extends FormRequest
     {
         return [
             'ID_USER'=> 'required|max:10numeric|digits_between:9, 9|exists:user__creates,ID_USER',
-            'COD_CURSO'=> 'required|max:8|exists:user__creates,COD_CURSO'
+            'COD_CURSO'=> 'required|max:8|exists:user__creates,COD_CURSO',
+            'ESTUDIANTE'=> 'required|min:15|max:50|exists:user__creates,NAME'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'ESTUDIANTE.exists'=> 'Aun no estas registrado, primero debes de registrarte como estudiante'
         ];
     }
 }
