@@ -38,7 +38,7 @@ class CursoController extends Controller
     {
         $datosG = request()->except('_token');
         curso::insert($datosG);
-        session()-> flash('exito', 'Nombre de Grupo-Empresa registrado');
+        session()-> flash('exito', 'Ya estas registrado');
         return redirect('/');
     }
 
