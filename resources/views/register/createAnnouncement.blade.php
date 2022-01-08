@@ -64,7 +64,7 @@
         @csrf
         <h1>Publicar convocatoria</h1>
         <div class="form-group">
-            <label for="TITULO_CONV">Título:</label><br>
+            <label for="TITULO_CONV">Título de convocatoria</label>:</label><br>
             <input type="text" class="form-control" id="titulo_conv" name="TITULO_CONV" placeholder="Ingrese el Titulo" value="{{ old('TITULO_CONV')}}">
             @error('TITULO_CONV')
                 <br>
