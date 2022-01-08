@@ -72,6 +72,7 @@
         @csrf
         <h1>Lista de estudiantes inscritos</h1>
         <body>
+
             <table class="table">
                 <thead class="thead-dark">
                     <th scope="col">Codigo de Docente</th>

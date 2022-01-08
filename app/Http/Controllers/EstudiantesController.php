@@ -16,7 +16,7 @@ class EstudiantesController extends Controller
      */
     public function index()
     {
-        $query= DB::table('cursos')
+        $query= DB::table('cursos')->where('COD_CURSO', '=', 'A1B2C2')
         ->get();
         return view('curso.listas',['listado'=>$query]);
     }

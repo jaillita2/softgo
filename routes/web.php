@@ -81,5 +81,4 @@ Route::post('contratos', [ContratosController::class, 'store'])->name('contratos
 Route::get('reportes', [ReportesController::class, 'index']);
 Route::post('reportes', [ReportesController::class, 'store'])->name('reportes.store');
 
-Route::get('student', [EstudiantesController::class, 'index']);
-Route::post('student', [EstudiantesController::class, 'store'])->name('student.store');
+Route::resource('/student',EstudiantesController::class);
