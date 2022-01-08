@@ -92,7 +92,7 @@
         </div>
 
         <div class="form-group ">
-            <button class="btn btn-success" id="btnAgregar">Emitir</button>
+            <button class="btn btn-success" style="background-color: rgb(3, 93, 134);" id="btnAgregar">Emitir</button>
             <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
         </div>
         <br>

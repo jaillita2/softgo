@@ -64,7 +64,7 @@
         @csrf
         <h1>Publicar convocatoria</h1>
         <div class="form-group">
-            <label for="TITULO_CONV">Título de convocatoria</label>:</label><br>
+            <label for="TITULO_CONV">Título de convocatoria:</label><br>
             <input type="text" class="form-control" id="titulo_conv" name="TITULO_CONV" placeholder="Ingrese el Titulo" value="{{ old('TITULO_CONV')}}">
             @error('TITULO_CONV')
                 <br>
@@ -117,7 +117,7 @@
         </div>
 
         <div class="form-group ">
-            <button class="btn btn-success" id="btnAgregar">Publicar</button>
+            <button class="btn btn-success" style="background-color: rgb(3, 93, 134);" id="btnAgregar">Publicar</button>
             <button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>
         </div>
         <br>

@@ -56,7 +56,7 @@
             <br>
             </div>
 
-            <button type="submit">Iniciar sesion</button>
+            <button type="submit" style="background-color: rgb(3, 93, 134);">Iniciar sesion</button>
             <!--<button type="button" class="btn btn-primary" onclick="location.href ='/'">Cancelar</button>-->
             
             <br>

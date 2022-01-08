@@ -36,7 +36,7 @@
 
         <div class="form-group ">
             
-            <button class="btn btn-success" id="btnAgregar">Iniciar sesion</button>
+            <button class="btn btn-success" style="background-color: rgb(3, 93, 134);" id="btnAgregar">Iniciar sesion</button>
                   </div>
 
     </form>
