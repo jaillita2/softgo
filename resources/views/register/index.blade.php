@@ -31,15 +31,14 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <h2>Bienvenido a la pagina principal</h2>
           <h2>SISTEMA DE APOYO A LA</h2>
           <h2>EMPRESA "TIS"</h2><br>
         </div>
         <div class="carousel-item">
-          <h2>Gestiona todo aspecto relacionado con la materia de "TIS"</h2>
+          <h2>Gestiona todo aspecto relacionado con la materia</h2>
         </div>
         <div class="carousel-item">
-          <h2>Sube tus propias propuestas</h2>
+          <h2>Elabora y sube tus propias propuestas</h2>
         </div>
       </div>
       <a class="carousel-control-prev" href="#main-carousel" role="button" data-slide="prev">
