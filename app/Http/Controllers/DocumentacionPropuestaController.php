@@ -44,7 +44,7 @@ class DocumentacionPropuestaController extends Controller
         }
         documentacionPropuesta::insert($datosP);
         session()-> flash('exito', 'Propuesta registrada exitosamente');
-       return redirect('/');
+       return redirect('Listar');
     }
 
     /**
