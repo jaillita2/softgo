@@ -48,12 +48,14 @@
 <body>
 
 <div class="dropdown">
-  <button class="dropbtn">≡</button>
+  <button class="dropbtn">Docente</button>
   <div class="dropdown-content">
-            <li><a href="{{ url('especificaciones') }}"> Especificaciones</a></li>
-            <li><a href="{{ url('MaterialApoyo') }}"> Material de Apoyo</a></li>
+            <li><a href="{{ url('especificaciones') }}">Subir Especificaciones</a></li>
+            <li><a href="{{ url('MaterialApoyo') }}">Subir Material de Apoyo</a></li>
+            <li><a href="{{ url('convocatoria') }}"> Subir Convocatoria</a></li>
             <li><a href="{{ url('contratos') }}"> Emitir Contrato</a></li>
-             <li><a href="{{ url('convocatoria') }}"> Convocatoria</a></li>
+            <li><a href="{{ url('Lista') }}"> Lista de GrupoEmpresas</a></li>
+            <li><a href="{{ url('/student') }}"> Lista de estudiantes inscritos</a></li>
   </div>
 </div>
 
