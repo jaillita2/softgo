@@ -52,12 +52,8 @@
   <div class="dropdown-content">
       
                     <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
-                    <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
                     <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
-                    <li><a href="{{ url('Listar') }}"> Listar Documentos</a></li>
-                    <li><a href="{{ url('Listarr') }}"> Listar Especificaciones</a></li>
-                    <li><a href="{{ url('Cursos') }}"> Registrarse con un consultor</a></li>
-                    <li><a href="{{ url('Lista') }}"> listar Grupo-Empresa</a></li>
+                   
                    
                 
   </div>

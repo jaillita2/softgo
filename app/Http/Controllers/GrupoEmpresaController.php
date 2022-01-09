@@ -40,7 +40,7 @@ class GrupoEmpresaController extends Controller
         $datosG = request()->except('_token');
         grupoEmpresa::insert($datosG);
         session()-> flash('exito', 'Nombre de Grupo-Empresa registrado');
-       return redirect('/');
+       return redirect('Propuesta');
     }
 
     /**

@@ -54,14 +54,10 @@
 <div class="dropdown">
   <button class="dropbtn">≡</button>
   <div class="dropdown-content">
-      
-                    <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
-                    <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
-                    <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
-                    <li><a href="{{ url('Listar') }}"> Listar Documentos</a></li>
-                    <li><a href="{{ url('Listarr') }}"> Listar Especificaciones</a></li>
+                    <li><a href="{{ url('Listarr') }}"> Lista de Especificaciones</a></li>  
+                    <li><a href="{{ url('Listar') }}"> Lista de Covocatorias</a></li>
                     <li><a href="{{ url('Cursos') }}"> Registrarse con un consultor</a></li>
-                    <li><a href="{{ url('Plani') }}"> Calendario</a></li>
+                   
                 
   </div>
 </div>
