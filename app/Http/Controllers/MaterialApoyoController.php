@@ -44,7 +44,7 @@ class MaterialApoyoController extends Controller
         }
         materialApoyo::insert($datosApo);
         session()-> flash('exito', 'Se guardo el material de apoyo');
-        return redirect('/');
+        return redirect('/student');
 
     }
 

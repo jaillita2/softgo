@@ -42,7 +42,7 @@ class CalendarioController extends Controller
         }
         calendario::insert($datosPlan);
         session()-> flash('exito', 'El documento plan-calendario se registo de forma correcta');
-        return redirect('/');
+        return redirect('Listar');
         
     }
 

@@ -52,11 +52,15 @@
 <body>
 
 <div class="dropdown">
-  <button class="dropbtn">≡</button>
+  <button class="dropbtn">Docente</button>
   <div class="dropdown-content">
-                    <li><a href="{{ url('Listarr') }}"> Lista de Especificaciones</a></li>  
-                    <li><a href="{{ url('Listar') }}"> Lista de Covocatorias</a></li>
-                    <li><a href="{{ url('Cursos') }}"> Registrarse con un consultor</a></li>
+            <li><a href="{{ url('especificaciones') }}">Subir Especificaciones</a></li>
+            <li><a href="{{ url('MaterialApoyo') }}">Subir Material de Apoyo</a></li>
+            <li><a href="{{ url('convocatoria') }}"> Subir Convocatoria</a></li>
+            <li><a href="{{ url('contratos') }}"> Emitir Contrato</a></li>
+            <li><a href="{{ url('reportes') }}"> Reporte de Propuestas</a></li>
+            <li><a href="{{ url('/student') }}"> Lista de estudiantes inscritos</a></li>
+            
                    
                 
   </div>

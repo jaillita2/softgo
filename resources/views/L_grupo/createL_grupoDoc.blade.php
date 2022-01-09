@@ -52,7 +52,7 @@
 <body>
 
 <div class="dropdown">
-  <button class="dropbtn">≡</button>
+  <button class="dropbtn">Estudiante</button>
   <div class="dropdown-content">
       
                     <li><a href="{{ url('Listarr') }}"> Lista de Especificaciones</a></li>  

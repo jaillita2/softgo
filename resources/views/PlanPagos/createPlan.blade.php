@@ -4,6 +4,12 @@
 
 @section('content')
 <link rel="stylesheet" href="/css/especificaciones.css" class="rel">
+@if($flash = Session::get('exito'))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>ATENCION!!!</strong> {{$flash}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style ="min-height:10000px">
@@ -48,7 +54,7 @@
 <body>
 
 <div class="dropdown">
-  <button class="dropbtn">≡</button>
+  <button class="dropbtn">Estudiante</button>
   <div class="dropdown-content">
       
                     <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>

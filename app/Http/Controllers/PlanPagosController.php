@@ -44,7 +44,7 @@ class PlanPagosController extends Controller
         }
         planPagos::insert($datosPlan);
         session()-> flash('exito', 'El plan de pagos se registo de forma correcta');
-        return redirect('/');
+        return redirect('Plani');
     }
 
     /**

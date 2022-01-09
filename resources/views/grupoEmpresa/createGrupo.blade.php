@@ -5,7 +5,12 @@
 @section('content')
 <link rel="stylesheet" href="/css/especificaciones.css" class="rel">
 
-
+@if($flash = Session::get('exito'))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>ATENCION!!!</strong> {{$flash}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
 <div class="container">
 <form action="{{route('Grupo.store')}}" method="post" enctype="multipart/form-data">
     <h1>Registro de Grupo-Empresa</h1>

@@ -8,6 +8,12 @@
 @section('content')
 <link rel="stylesheet" href="/css/L_convocatorias.css" class="rel">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+@if($flash = Session::get('exito'))
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>ATENCION!!!</strong> {{$flash}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style ="min-height:10000px">
@@ -52,25 +58,25 @@
 <body>
 
 <div class="dropdown">
-  <button class="dropbtn">≡</button>
+  <button class="dropbtn">Docente</button>
   <div class="dropdown-content">
-      
-                    <li><a href="{{ url('Propuesta') }}"> Propuesta</a></li>
-                    <li><a href="{{ url('Grupo') }}"> Grupo-Empresa</a></li>
-                    <li><a href="{{ url('Pagos') }}"> Plan de Pagos</a></li>
-                    <li><a href="{{ url('Listar') }}"> Listar Convocatorias</a></li>
-                    <li><a href="{{ url('Listarr') }}"> Listar Especificaciones</a></li>
-                    <li><a href="{{ url('Cursos') }}"> Registrarse con un consultor</a></li>
-                    <li><a href="{{ url('Plani') }}"> Calendario</a></li>
+             <li><a href="{{ url('especificaciones') }}">Subir Especificaciones</a></li>
+            <li><a href="{{ url('MaterialApoyo') }}">Subir Material de Apoyo</a></li>
+            <li><a href="{{ url('convocatoria') }}"> Subir Convocatoria</a></li>
+            <li><a href="{{ url('contratos') }}"> Emitir Contrato</a></li>
+            <li><a href="{{ url('reportes') }}"> Reporte de Propuestas</a></li>
+            <li><a href="{{ url('Lista') }}"> Lista de GrupoEmpresas</a></li>
                 
   </div>
 </div>
 
 </body>
+
 <div class="container">
     <form action="/" method="get" enctype="multipart/form-data">
         @csrf
         <h1>Lista de estudiantes inscritos</h1>
+        
         <body>
 
             <table class="table">

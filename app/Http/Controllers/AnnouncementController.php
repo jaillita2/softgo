@@ -23,7 +23,7 @@ class AnnouncementController extends Controller
         }
         Convocatoria::insert($datosConv);
         session()-> flash('exito', 'Convocatoria guardada con exito');
-        return redirect('/');
+        return redirect('especificaciones');
 
 
     }

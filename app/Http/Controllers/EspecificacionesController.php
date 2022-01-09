@@ -47,7 +47,7 @@ class EspecificacionesController extends Controller
 
         especificaciones::insert($datosEsp);
         session()-> flash('exito', 'La especificacion se guardo con exito');
-        return redirect('/');
+        return redirect('/student');
 
     }
     /**
