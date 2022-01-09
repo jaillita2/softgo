@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\estudiantes;
+use App\Models\grupodOC;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Http\Requests\StoreL_Especificacion;
 
-class EstudiantesController extends Controller
+class GrupodOCController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +15,9 @@ class EstudiantesController extends Controller
      */
     public function index()
     {
-        $query= DB::table('cursos')
+        $query= DB::table('grupo_empresas')
         ->get();
-        return view('curso.listas',['listado'=>$query]);
+        return view('L_grupo.createL_grupoDoc',['listado'=>$query]);
     }
 
     /**
@@ -28,7 +27,7 @@ class EstudiantesController extends Controller
      */
     public function create()
     {
-        return view('curso.listas');
+        //
     }
 
     /**
@@ -45,10 +44,10 @@ class EstudiantesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\estudiantes  $estudiantes
+     * @param  \App\Models\grupodOC  $grupodOC
      * @return \Illuminate\Http\Response
      */
-    public function show(estudiantes $estudiantes)
+    public function show(grupodOC $grupodOC)
     {
         //
     }
@@ -56,10 +55,10 @@ class EstudiantesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\estudiantes  $estudiantes
+     * @param  \App\Models\grupodOC  $grupodOC
      * @return \Illuminate\Http\Response
      */
-    public function edit(estudiantes $estudiantes)
+    public function edit(grupodOC $grupodOC)
     {
         //
     }
@@ -68,10 +67,10 @@ class EstudiantesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\estudiantes  $estudiantes
+     * @param  \App\Models\grupodOC  $grupodOC
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, estudiantes $estudiantes)
+    public function update(Request $request, grupodOC $grupodOC)
     {
         //
     }
@@ -79,10 +78,10 @@ class EstudiantesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\estudiantes  $estudiantes
+     * @param  \App\Models\grupodOC  $grupodOC
      * @return \Illuminate\Http\Response
      */
-    public function destroy(estudiantes $estudiantes)
+    public function destroy(grupodOC $grupodOC)
     {
         //
     }

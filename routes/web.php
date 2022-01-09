@@ -15,6 +15,7 @@ use App\Http\Controllers\PlanPagosController;
 use App\Http\Controllers\L_grupocontroller;
 use App\Http\Controllers\L_convocatoriascontroller;
 use App\Http\Controllers\L_especificacionesController;
+use App\Http\Controllers\GrupodOCController;
 use App\Http\Controllers\ContratosController;
 use App\Http\Controllers\ReportesController;
 use App\Http\Controllers\EstudiantesController;
@@ -82,3 +83,5 @@ Route::get('reportes', [ReportesController::class, 'index']);
 Route::post('reportes', [ReportesController::class, 'store'])->name('reportes.store');
 
 Route::resource('/student',EstudiantesController::class);
+
+Route::resource('/grupos',GrupodOCController::class);
