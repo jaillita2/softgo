@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
-    color:black;
+
 }
 
 .form-register button{
@@ -44,6 +44,7 @@
     color:black;
 }
 
+.form-register label { color:black}
 .controls{
     border-radius: solido 1px #ccc ;
     padding: 4px;
