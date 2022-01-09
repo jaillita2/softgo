@@ -17,12 +17,23 @@ body::before{
     position: absolute;
     opacity: 0.5;
 }
-body h1 {
-    font-size: 60px;
+body h2 {
+    font-size: 50px;
     margin: center;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(0, 0, 0);
     line-height: 2;
     position: relative;
+}
+
+#main-carousel {
+    padding: 0 20%
+}
+
+.carousel-item {
+    background-color: rgba(208, 206, 206, 0.366);
+    border-radius: 15px;
+    min-height: 60vh;
+    padding: 10px 25px;
 }
