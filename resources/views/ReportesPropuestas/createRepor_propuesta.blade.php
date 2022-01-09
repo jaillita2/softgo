@@ -75,6 +75,8 @@
                 @foreach ($empresas as $empresa)
                     <tr>
                         <td> {{ $empresa->NAME_EMP }} </td>
+                        <td><a href="/storage/{{$empresa->DOC_P}}" target="_blank">archivo</a></td>
+                        {{-- <td>{{$empresa->DOC_P}}</td> --}}
                         <td> <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={{ $empresa->EMAIL_DOCE }}" target="_blank">
                             Responder </a>
                         </td>

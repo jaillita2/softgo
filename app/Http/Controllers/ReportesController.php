@@ -16,7 +16,9 @@ class ReportesController extends Controller
      */
     public function index()
     {
-        $query = DB::table('grupo_empresas')->get();
+        $query = DB::table('grupo_empresas')
+        ->join('documentacion_propuestas', 'grupo_empresas.NAME_EMP', '=', 'documentacion_propuestas.NAME_P')
+        ->get();
         return view('ReportesPropuestas.createRepor_propuesta', ['empresas'=>$query]);
     } 
 
