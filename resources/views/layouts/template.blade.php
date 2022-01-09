@@ -17,8 +17,15 @@
     <header class="header">
         <link rel="stylesheet" href="/css/style.css" class="rel">
         <div class="contanier logo-nav-contanier">
-            <div id="logo"></div>
-            <h1>FACULTAD DE CIENCIAS Y TECNOLOGIA</h1>
+            {{-- <div id="logo"></div> --}}
+            <div class="site-logo">
+                <img id="logo" src="css/logo-fcyt.png" class="ml-4">
+                <div class="fcyt-text">
+                    <p>FACULTAD DE CIENCIAS Y</p>
+                    <p>TECNOLOGÍA</p>
+                </div>
+            </div>
+            
             <span class="menu-icon">Menu</span>
             <nav class="navigation">
                 <ul>
@@ -35,6 +42,7 @@
 
     <footer class="footer">
         <link rel="stylesheet" href="/css/style.css" class="rel">
+        <div id="logo1"></div>
         <div id="logo2"></div>
             <div class="contaniers">
                 <p>Contactanos</p>
